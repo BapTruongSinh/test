@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address - Profile</title>
+    <!-- Link to CSS files within this directory -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/Profile.css"> <!-- Updated CSS link -->
+</head>
+<body>
+<div class="profile-customer-page4">
+        <!-- Sidebar copied, paths adjusted, active state changed -->
+<aside class="sidebar4">
+<div class="user-profile4">
+<div class="avatar-container4">
+                     <img id="sidebar-avatar" src="assets/images/455123067_1470091394391641_5075587184145921216_n.jpg" alt="User Avatar" class="avatar4" style="cursor: pointer;"> <!-- Added ID and pointer cursor -->
+                    <span class="status-indicator4"></span>
+                </div>
+                <h2 class="user-name4">Trung Trung</h2> <!-- Figma 3:127 -->
+                <p class="user-role4">Customer</p> <!-- Figma 3:128 -->
+            </div>
+            <nav class="profile-nav4"> <!-- Updated class -->
+                <ul>
+                    <!-- Item 1: Edit Profile -->
+                    <li class="profile-nav-item4"> <!-- Updated class -->
+                        <a href="ProfileEditCustomer.html">
+                            <img src="assets/images/edit-246.png" alt="" class="profile-nav-icon4"> <!-- Updated class -->
+                            <span>Edit Profile</span> <!-- Figma 3:131 -->
+                        </a>
+                    </li>
+                    <!-- Item 2: Change Password -->
+                    <li class="profile-nav-item4"> <!-- Updated class -->
+                         <a href="ProfileCustomerPassword.html"> <!-- Link to Change Password page -->
+                            <img src="assets/images/chiakia.png" alt="" class="profile-nav-icon4"> <!-- Updated class -->
+                            <span>Change Password</span> <!-- Figma 3:135 -->
+                        </a>
+                    </li>
+                    <!-- Item 3: Address (Active) -->
+                    <li class="profile-nav-item4 active4"> <!-- Updated class & active state -->
+                         <a href="#">
+                            <img src="assets/images/vitri.png" alt="" class="profile-nav-icon4"> <!-- Updated class -->
+                            <span>Address</span> <!-- Figma 3:139 -->
+                        </a>
+                    </li>
+                    <!-- Item 4: Coupon -->
+                    <li class="profile-nav-item4"> <!-- Updated class -->
+                         <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/gift-coupon-icon-20763.png" alt="" class="profile-nav-icon4"> <!-- Updated class -->
+                            <span>Coupon</span> <!-- Figma 3:143 -->
+                        </a>
+                    </li>
+                     <!-- Item 5: Rank -->
+                    <li class="profile-nav-item4"> <!-- Updated class -->
+                         <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-rank-icon.png" alt="" class="profile-nav-icon4"> <!-- Updated class -->
+                            <span>Rank</span> <!-- Figma 3:147 -->
+                            <span class="rank-value4">: Gold</span> <!-- Updated class -->
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+<main class="main-content4">
+            <!-- Header section (Similar to previous profile pages) -->
+<header class="top-bar4">
+<h1 class="page-title4">Profile</h1> <!-- Figma 3:152 -->
+<div class="account-section4">
+                    <a href="ProfileEditCustomer.html" title="Edit Profile">
+                        <img src="assets/images/account-icon-large.png" alt="Edit Profile" class="account-icon"> <!-- No '4' needed based on CSS -->
+                    </a>
+                    <a href="index.html" title="Go to Home">
+                        <img src="assets/images/360_F_66468754_86IFi1dhqwtHdXzPeMQNhGtGp8Z2D3yC.jpg" alt="Go to Home" class="account-placeholder4"> <!-- Link to Home -->
+                    </a>
+                </div>
+            </header>
+
+            <!-- Address Content Area -->
+            <div class="profile-content-wrapper4"> <!-- Updated class -->
+                <section class="address-list-section4"> <!-- Updated class -->
+                    <h2>My Addresses</h2>
+                    <a href="ProfileCustomerAddAddress.html" class="add-address-btn4">+ Add New Address</a> <!-- Updated class -->
+
+                    <div class="address-list4"> <!-- Updated class -->
+                        <!-- Address Item 1 (Based on Figma 3:154) -->
+                        <div class="address-item4"> <!-- Updated class -->
+                            <div class="address-details4"> <!-- Updated class -->
+                                <div class="name-phone4"> <!-- Updated class -->
+                                    <span class="name4">Trung Trung</span> <!-- Updated class -->
+                                    <span class="separator4">|</span> <!-- Updated class -->
+                                    <span class="phone4">0853364475</span> <!-- Updated class -->
+                                </div>
+                                <div class="address-line4">Hòa Khánh Nam, Thành Phố Đà Nẵng</div> <!-- Updated class -->
+                                <div class="address-type4"> <!-- Updated class -->
+                                    <span class="label4 default4">Default</span> <!-- Updated class -->
+                                </div>
+                            </div>
+                            <div class="address-actions4"> <!-- Updated class -->
+                                <a href="ProfileCustomerEditAddress.html" class="action-link4">Edit</a> <!-- Updated class -->
+                                <a href="#" class="action-link4 delete-link4">Delete</a> <!-- Updated class -->
+                            </div>
+                        </div>
+
+                        <!-- Address Item 2 (Based on Figma 3:155) -->
+                        <div class="address-item4"> <!-- Updated class -->
+                            <div class="address-details4"> <!-- Updated class -->
+                                <div class="name-phone4"> <!-- Updated class -->
+                                    <span class="name4">Trung</span> <!-- Updated class -->
+                                    <span class="separator4">|</span> <!-- Updated class -->
+                                    <span class="phone4">0123456789</span> <!-- Updated class -->
+                                </div>
+                                <div class="address-line4">Hòa Khánh Bắc, Thành Phố Đà Nẵng</div> <!-- Updated class -->
+                                <!-- No default label shown in Figma for this one -->
+                            </div>
+                            <div class="address-actions4"> <!-- Updated class -->
+                                <a href="ProfileCustomerEditAddress.html" class="action-link4">Cập nhật</a> <!-- Updated class -->
+                                <a href="#" class="action-link4 delete-link4">Xóa</a> <!-- Updated class -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add JS file if needed -->
+    <!-- Avatar Change Modal (Initially Hidden) -->
+    <div id="avatar-modal" class="modal-overlay4"> <!-- Updated class -->
+        <div class="modal-content4"> <!-- Updated class -->
+            <span class="modal-close-btn4">&times;</span> <!-- Updated class -->
+            <h2>Upload your photo</h2>
+            <div class="modal-avatar-preview4"> <!-- Updated class -->
+                <img id="modal-avatar-img" src="assets/images/455123067_1470091394391641_5075587184145921216_n.jpg" alt="Avatar Preview"> <!-- Placeholder image, same as sidebar -->
+            </div>
+            <div class="modal-buttons4"> <!-- Updated class -->
+                 <label for="avatar-upload-input" class="modal-button4 upload-button4">Upload</label> <!-- Updated class -->
+                 <input type="file" id="avatar-upload-input" accept="image/*" style="display: none;">
+                 <button class="modal-button4 submit-button">Submit</button> <!-- Updated class (submit-button doesn't have 4 in CSS) -->
+                 <button class="modal-button4 cancel-button">Cancel</button> <!-- Updated class (cancel-button doesn't have 4 in CSS) -->
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/ProfileCustomerAddress.js"></script> <!-- Link the JavaScript file -->
+</body>
+</html>

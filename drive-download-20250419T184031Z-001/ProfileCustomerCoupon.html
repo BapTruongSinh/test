@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Coupons - Profile</title>
+    <!-- Link to CSS files within this directory -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/Profile.css">
+</head>
+<body>
+    <div class="profile-customer-page5">
+        <!-- Sidebar copied, paths adjusted, active state changed -->
+        <aside class="sidebar5">
+            <div class="user-profile5">
+                <div class="avatar-container5">
+                    <img id="sidebar-avatar" src="assets/images/455123067_1470091394391641_5075587184145921216_n.jpg" alt="User Avatar" class="avatar5" style="cursor: pointer;"> <!-- Added ID and pointer cursor -->
+                    <span class="status-indicator5"></span>
+                </div>
+                <h2 class="user-name5">Trung Trung</h2> <!-- Figma 4:175 -->
+                <p class="user-role5">Customer</p> <!-- Figma 4:176 -->
+            </div>
+            <nav class="profile-nav5">
+                <ul>
+                    <!-- Item 1: Edit Profile -->
+                    <li class="profile-nav-item5">
+                        <a href="ProfileEditCustomer.html">
+                            <img src="assets/images/edit-246.png" alt="" class="profile-nav-icon5"> <!-- Figma 4:180 -->
+                            <span>Edit Profile</span> <!-- Figma 4:179 -->
+                        </a>
+                    </li>
+                    <!-- Item 2: Change Password -->
+                    <li class="profile-nav-item5">
+                         <a href="ProfileCustomerPassword.html">
+                            <img src="assets/images/chiakia.png" alt="" class="profile-nav-icon5"> <!-- Figma 4:184 -->
+                            <span>Change Password</span> <!-- Figma 4:183 -->
+                        </a>
+                    </li>
+                    <!-- Item 3: Address -->
+                    <li class="profile-nav-item5">
+                         <a href="ProfileCustomerAddress.html">
+                            <img src="assets/images/vitri.png" alt="" class="profile-nav-icon5"> <!-- Figma 4:188 -->
+                            <span>Address</span> <!-- Figma 4:187 -->
+                        </a>
+                    </li>
+                    <!-- Item 4: Coupon (Active) -->
+                    <li class="profile-nav-item5 active"> <!-- Set as active -->
+                         <a href="#">
+                            <img src="assets/images/gift-coupon-icon-20763.png" alt="" class="profile-nav-icon5"> <!-- Figma 4:192 -->
+                            <span>Coupon</span> <!-- Figma 4:191 -->
+                        </a>
+                    </li>
+                     <!-- Item 5: Rank -->
+                    <li class="profile-nav-item5">
+                         <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-rank-icon.png" alt="" class="profile-nav-icon5"> <!-- Figma 4:196 -->
+                            <span>Rank</span> <!-- Figma 4:195 -->
+                            <span class="rank-value5">: Gold</span> <!-- Figma 4:232 -->
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content5">
+            <!-- Header section (Similar to previous profile pages) -->
+             <header class="top-bar5">
+                <h1 class="page-title5">Profile</h1> <!-- Figma 4:202 -->
+                <div class="account-section5">
+                     <a href="ProfileEditCustomer.html" title="Edit Profile">
+                        <img src="assets/images/account-icon-large.png" alt="Edit Profile" class="account-icon"> <!-- Link to Customer Edit Profile -->
+                    </a>
+                    <a href="index.html" title="Go to Home">
+                        <img src="assets/images/360_F_66468754_86IFi1dhqwtHdXzPeMQNhGtGp8Z2D3yC.jpg" alt="Go to Home" class="account-placeholder5"> <!-- Link to Home -->
+                    </a>
+                </div>
+            </header>
+
+            <!-- Coupon Content Area -->
+            <div class="profile-content-wrapper5">
+                <section class="coupon-section5"> <!-- New specific class -->
+                    <h2>Coupon Warehouse</h2> <!-- Figma 4:201 -->
+                    <hr class="section-divider5"> <!-- Figma 4:203 -->
+
+                    <div class="coupon-grid5">
+                        <!-- Coupon Item 1 (Based on Figma Group 4:205) -->
+                        <div class="coupon-item5">
+                            <div class="coupon-visual5"> <!-- Orange part -->
+                                <img src="assets/images/coupon-background.png" alt="Coupon background" class="coupon-bg5"> <!-- Figma 4:210 -->
+                                <!-- Maybe add an icon or logo here later -->
+                            </div>
+                            <div class="coupon-info5"> <!-- White part -->
+                                <h3 class="coupon-title5">Summer Sale</h3> <!-- Figma 4:207 -->
+                                <p class="coupon-discount5">Discount: 15%</p> <!-- Figma 4:208 - Assuming % -->
+                                <p class="coupon-expiry5">Hiệu lực: 1 ngày</p> <!-- Figma 4:209 -->
+                            </div>
+                        </div>
+
+                        <!-- Coupon Item 2 (Based on Figma Group 4:211) -->
+                        <div class="coupon-item5">
+                             <div class="coupon-visual5">
+                                <img src="assets/images/coupon-background.png" alt="Coupon background" class="coupon-bg5"> <!-- Figma 4:217 -->
+                            </div>
+                            <div class="coupon-info5">
+                                <h3 class="coupon-title5">Summer Sale</h3> <!-- Figma 4:214 -->
+                                <p class="coupon-discount5">Discount: 15%</p> <!-- Figma 4:215 -->
+                                <p class="coupon-expiry5">Hiệu lực: 1 ngày</p> <!-- Figma 4:216 -->
+                            </div>
+                        </div>
+
+                        <!-- Coupon Item 3 (Based on Figma Group 4:218) -->
+                        <div class="coupon-item5">
+                             <div class="coupon-visual5">
+                                <img src="assets/images/coupon-background.png" alt="Coupon background" class="coupon-bg5"> <!-- Figma 4:224 -->
+                            </div>
+                            <div class="coupon-info5">
+                                <h3 class="coupon-title5">Summer Sale</h3> <!-- Figma 4:221 -->
+                                <p class="coupon-discount5">Discount: 15%</p> <!-- Figma 4:222 -->
+                                <p class="coupon-expiry5">Hiệu lực: 1 ngày</p> <!-- Figma 4:223 -->
+                            </div>
+                        </div>
+
+                        <!-- Coupon Item 4 (Based on Figma Group 4:225) -->
+                        <div class="coupon-item5">
+                             <div class="coupon-visual5">
+                                <img src="assets/images/coupon-background.png" alt="Coupon background" class="coupon-bg5"> <!-- Figma 4:231 -->
+                            </div>
+                            <div class="coupon-info5">
+                                <h3 class="coupon-title5">Summer Sale</h3> <!-- Figma 4:228 -->
+                                <p class="coupon-discount5">Discount: 15%</p> <!-- Figma 4:229 -->
+                                <p class="coupon-expiry5">Hiệu lực: 1 ngày</p> <!-- Figma 4:230 -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add JS file if needed -->
+    <!-- Avatar Change Modal (Initially Hidden) -->
+    <div id="avatar-modal" class="modal-overlay5">
+        <div class="modal-content5">
+            <span class="modal-close-btn5">&times;</span> <!-- Simple close button -->
+            <h2>Upload your photo</h2>
+            <div class="modal-avatar-preview5">
+                <img id="modal-avatar-img" src="assets/images/455123067_1470091394391641_5075587184145921216_n.jpg" alt="Avatar Preview"> <!-- Placeholder image, same as sidebar -->
+            </div>
+            <div class="modal-buttons5">
+                 <label for="avatar-upload-input" class="modal-button5 upload-button5">Upload</label>
+                 <input type="file" id="avatar-upload-input" accept="image/*" style="display: none;">
+                 <button class="modal-button5 submit-button">Submit</button> <!-- Note: submit-button class was not in CSS, but modal-button was, so only modal-button5 is applied -->
+                 <button class="modal-button5 cancel-button">Cancel</button> <!-- Note: cancel-button class was not in CSS, but modal-button was, so only modal-button5 is applied -->
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/ProfileCustomerCoupon.js"></script> <!-- Link the JavaScript file -->
+</body>
+</html>

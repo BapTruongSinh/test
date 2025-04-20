@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Remove Rank</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/ManagementRemoveRank.css">
+    <!-- Add Font Awesome if needed later -->
+</head>
+<body>
+    <div class="management-system">
+        <!-- Sidebar (Reused structure, Management Rank active) -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="avatar-container">
+                    <img src="assets/images/455123067_1470091394391641_5075587184145921216_n.jpg" alt="User Avatar" class="avatar"> <!-- Figma 11:199 -->
+                    <span class="status-indicator"></span> <!-- Figma 11:198 -->
+                </div>
+                <h2 class="user-name">Trung Trung</h2> <!-- Figma 11:200 -->
+                <p class="user-role">Manager</p> <!-- Figma 11:201 -->
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <!-- Links adjusted relative to Management_Remove_Rank -->
+                    <li class="nav-item">
+                        <a href="ManagementSystemAdd.html">
+                            <img src="assets/images/manage-system-icon.png" alt="" class="nav-icon"> <!-- Figma 11:205 -->
+                            <span>Manage System</span> <!-- Figma 11:204 -->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ManagementCustomerAccount.html">
+                            <img src="assets/images/manage-customer-icon.png" alt="" class="nav-icon"> <!-- Figma 11:209 -->
+                            <span>Manage Customer</span> <!-- Figma 11:208 -->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-order-icon.png" alt="" class="nav-icon"> <!-- Figma 11:213 -->
+                            <span>Manage Order</span> <!-- Figma 11:212 -->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-coupon-icon.png" alt="" class="nav-icon"> <!-- Figma 11:217 -->
+                            <span>Manage Coupon</span> <!-- Figma 11:216 -->
+                        </a>
+                    </li>
+                    <li class="nav-item active"> <!-- Set Management Rank as active -->
+                        <a href="#">
+                            <img src="assets/images/manage-rank-icon.png" alt="" class="nav-icon"> <!-- Figma 11:221 -->
+                            <span>Management Rank</span> <!-- Figma 11:220 -->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-statistics-icon.png" alt="" class="nav-icon"> <!-- Figma 11:225 -->
+                            <span>Manage Statictis</span> <!-- Figma 11:224 -->
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header similar to previous page -->
+            <header class="top-bar">
+                <h1 class="page-title">Management</h1> <!-- Figma 11:226 -->
+                <div class="account-section">
+                     <a href="ProfileAdminEdit.html" title="Edit Profile">
+                        <img src="assets/images/account-icon-large.png" alt="Edit Profile" class="account-icon"> <!-- Link to Admin Edit Profile -->
+                    </a>
+                    <a href="index.html" title="Go to Home">
+                        <img src="assets/images/360_F_66468754_86IFi1dhqwtHdXzPeMQNhGtGp8Z2D3yC.jpg" alt="Go to Home" class="account-placeholder"> <!-- Link to Home -->
+                    </a>
+                </div>
+            </header>
+
+            <!-- Remove Rank Section based on Figma 11:179 -->
+            <section class="remove-rank-section"> <!-- Changed class name -->
+                <!-- Dropdown similar to previous pages, but default is Remove -->
+                <div class="rank-action-dropdown-section">
+                    <div class="dropdown-container">
+                       <button class="rank-action-btn">
+                           Remove Rank <span class="dropdown-arrow">▼</span> <!-- Default text, matches Figma 11:184 -->
+                       </button>
+                       <div class="dropdown-content">
+                           <a href="ManagementAddRank.html">Add Rank</a> <!-- Link to Add Rank page -->
+                           <a href="ManagementEditRank.html">Edit Rank</a> <!-- Link to Edit Rank page -->
+                       </div>
+                    </div>
+                </div>
+
+                <!-- Form for Removing Rank -->
+                <form class="remove-rank-form"> <!-- Changed class name -->
+                    <div class="form-row"> <!-- Using form-row for consistency, even with one item -->
+                        <div class="form-group"> <!-- Figma Group 11:185 -->
+                            <label for="rank-name">Name Rank:</label> <!-- Figma 11:186 -->
+                            <input type="text" id="rank-name" name="rank-name" placeholder="Enter rank name to remove"> <!-- Input from Figma 11:187 -->
+                        </div>
+                         <!-- Add a placeholder div to balance the row if needed, or adjust CSS -->
+                         <div class="form-group-placeholder"></div>
+                    </div>
+                    <div class="form-actions">
+                         <!-- Remove Button based on Figma 11:192, 11:193 -->
+                        <button type="submit" class="remove-button">Remove</button>
+                    </div>
+                </form>
+
+                <!-- Current Rank Display Section (Reused from Edit Rank) -->
+                <div class="rank-info-section">
+                    <h3>Current Ranks</h3> <!-- Assuming this section remains -->
+                     <hr class="section-divider"> <!-- Reusing divider style -->
+                    <div class="rank-info-grid"> <!-- Reusing grid layout -->
+                        <!-- Bronze Rank Info -->
+                        <div class="rank-card"> <!-- Based on Figma 11:228 -->
+                            <h4>Rank: Bronze</h4> <!-- Text from 11:234, 11:238 -->
+                            <hr> <!-- Line from 11:242 -->
+                            <p>0 - 1000 points</p> <!-- Text from 11:246 -->
+                            <p>Discount 5%</p> <!-- Text from 11:232 -->
+                            <p>Free shipping for orders over 200k vnđ</p> <!-- Text from 11:250 -->
+                        </div>
+                        <!-- Silver Rank Info -->
+                        <div class="rank-card"> <!-- Based on Figma 11:229 -->
+                             <h4>Rank: Silver</h4> <!-- Text from 11:235, 11:239 -->
+                             <hr> <!-- Line from 11:243 -->
+                             <p>1000 - 2000 points</p> <!-- Text from 11:247 -->
+                             <p>Discount 10%</p> <!-- Text from 11:233 -->
+                             <p>Free shipping for orders over 100k vnđ</p> <!-- Text from 11:251 -->
+                        </div>
+                        <!-- Gold Rank Info -->
+                        <div class="rank-card"> <!-- Based on Figma 11:230 -->
+                             <h4>Rank: Gold</h4> <!-- Text from 11:236, 11:240 -->
+                             <hr> <!-- Line from 11:244 -->
+                             <p>2000 - 5000 points</p> <!-- Text from 11:248 -->
+                             <p>Discount 15%</p> <!-- Assuming progression -->
+                             <p>Free shipping</p> <!-- Text from 11:252 -->
+                        </div>
+                        <!-- Platinum Rank Info -->
+                        <div class="rank-card"> <!-- Based on Figma 11:231 -->
+                             <h4>Rank: Platinum</h4> <!-- Text from 11:237, 11:241 -->
+                             <hr> <!-- Line from 11:245 -->
+                             <p>5000 - 10000 points</p> <!-- Text from 11:249 -->
+                             <p>Discount 20%</p> <!-- Assuming progression -->
+                             <p>Free shipping</p> <!-- Text from 11:252 -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Add JS file if needed -->
+    <!-- <script src="assets/js/main.js"></script> -->
+</body>
+</html>

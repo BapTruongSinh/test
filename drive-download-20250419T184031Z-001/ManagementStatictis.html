@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Statistics</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/ManagementStatictis.css">
+    <!-- Add Font Awesome if needed later -->
+    <!-- Add Chart.js if needed for charts -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+</head>
+<body>
+    <div class="management-system">
+        <!-- Sidebar (Reused structure, Manage Statictis active) -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="avatar-container">
+                    <img src="assets/images/455123067_1470091394391641_5075587184145921216_n.jpg" alt="User Avatar" class="avatar"> <!-- Figma 11:260 -->
+                    <span class="status-indicator"></span> <!-- Figma 11:259 -->
+                </div>
+                <h2 class="user-name">Trung Trung</h2> <!-- Figma 11:261 -->
+                <p class="user-role">Manager</p> <!-- Figma 11:262 -->
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <!-- Links adjusted relative to Management_Statictis -->
+                    <li class="nav-item">
+                        <a href="ManagementSystemAdd.html">
+                            <img src="assets/images/manage-system-icon.png" alt="" class="nav-icon"> <!-- Figma 11:266 -->
+                            <span>Manage System</span> <!-- Figma 11:265 -->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ManagementCustomerAccount.html">
+                            <img src="assets/images/manage-customer-icon.png" alt="" class="nav-icon"> <!-- Figma 11:270 -->
+                            <span>Manage Customer</span> <!-- Figma 11:269 -->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-order-icon.png" alt="" class="nav-icon"> <!-- Figma 11:274 -->
+                            <span>Manage Order</span> <!-- Figma 11:273 -->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-coupon-icon.png" alt="" class="nav-icon"> <!-- Figma 11:278 -->
+                            <span>Manage Coupon</span> <!-- Figma 11:277 -->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-rank-icon.png" alt="" class="nav-icon"> <!-- Figma 11:282 -->
+                            <span>Management Rank</span> <!-- Figma 11:281 -->
+                        </a>
+                    </li>
+                    <li class="nav-item active"> <!-- Set Manage Statictis as active -->
+                        <a href="#">
+                            <img src="assets/images/manage-statistics-icon.png" alt="" class="nav-icon"> <!-- Figma 11:286 -->
+                            <span>Manage Statictis</span> <!-- Figma 11:285 -->
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header similar to previous page -->
+            <header class="top-bar">
+                <h1 class="page-title">Management</h1> <!-- Figma 11:427 -->
+                <div class="account-section">
+                     <a href="ProfileAdminEdit.html" title="Edit Profile">
+                        <img src="assets/images/account-icon-large.png" alt="Edit Profile" class="account-icon"> <!-- Link to Admin Edit Profile -->
+                    </a>
+                    <a href="index.html" title="Go to Home">
+                        <img src="assets/images/360_F_66468754_86IFi1dhqwtHdXzPeMQNhGtGp8Z2D3yC.jpg" alt="Go to Home" class="account-placeholder"> <!-- Link to Home -->
+                    </a>
+                </div>
+            </header>
+
+            <!-- Statistics Section based on Figma 11:254 -->
+            <section class="statistics-section">
+
+                <!-- Summary Boxes -->
+                <div class="summary-boxes">
+                    <div class="summary-box"> <!-- Figma Group 11:287 -->
+                        <img src="assets/images/icon-price-buy-computer-communication-04d369-640.png" alt="Product Icon" class="summary-icon"> <!-- Figma 11:289 -->
+                        <div class="summary-text">
+                            <span class="summary-title">Total Product</span> <!-- Figma 11:290 -->
+                            <span class="summary-value">1111 Product</span> <!-- Figma 11:291 -->
+                        </div>
+                    </div>
+                    <div class="summary-box"> <!-- Figma Group 11:297 -->
+                        <img src="assets/images/vitri.png" alt="Order Icon" class="summary-icon"> <!-- Figma 11:299 -->
+                        <div class="summary-text">
+                            <span class="summary-title">Total Order</span> <!-- Figma 11:300 -->
+                            <span class="summary-value">11 Order</span> <!-- Figma 11:301 -->
+                        </div>
+                    </div>
+                     <div class="summary-box"> <!-- Figma Group 11:317 -->
+                        <img src="assets/images/secure-icon-png-4988.png" alt="Ban Icon" class="summary-icon"> <!-- Figma 11:319 -->
+                        <div class="summary-text">
+                            <span class="summary-title">Ban</span> <!-- Figma 11:320 -->
+                            <span class="summary-value">1 Banned</span> <!-- Figma 11:321 -->
+                        </div>
+                    </div>
+                    <div class="summary-box"> <!-- Figma Group 11:292 -->
+                        <img src="assets/images/manage-rank-icon.png" alt="Income Icon" class="summary-icon"> <!-- Figma 11:294 -->
+                        <div class="summary-text">
+                            <span class="summary-title">Total Income</span> <!-- Figma 11:295 -->
+                            <span class="summary-value">111.111.111 đ</span> <!-- Figma 11:296 -->
+                        </div>
+                    </div>
+                     <div class="summary-box"> <!-- Figma Group 11:307 -->
+                        <img src="assets/images/png-clipart-aliexpress-computer-icons-y-miscellaneous-rectangle-thumbnail.png" alt="Out of Stock Icon" class="summary-icon"> <!-- Figma 11:309 -->
+                        <div class="summary-text">
+                            <span class="summary-title">Out Of Stock</span> <!-- Figma 11:310 -->
+                            <span class="summary-value">11 Product</span> <!-- Figma 11:311 -->
+                        </div>
+                    </div>
+                     <div class="summary-box"> <!-- Figma Group 11:312 -->
+                        <img src="assets/images/check-tick-icon-14145.png" alt="Cancel Order Icon" class="summary-icon"> <!-- Figma 11:314 -->
+                        <div class="summary-text">
+                            <span class="summary-title">Cancel Order</span> <!-- Figma 11:315 -->
+                            <span class="summary-value">11 Order</span> <!-- Figma 11:316 -->
+                        </div>
+                    </div>
+                    <!-- Repeat for other boxes: Total Income (11:292), Total Order (11:297), Ban (11:317), Out Of Stock (11:307), Cancel Order (11:312) -->
+                    <!-- Note: Figma shows Total Order twice (11:297 & 11:302), using only once -->
+                </div>
+
+                <!-- Charts Section -->
+                <div class="charts-section">
+                    <div class="chart-container"> <!-- Figma Group 11:421 -->
+                        <div class="chart-header">Sales Statistics</div> <!-- Figma 11:423 -->
+                        <hr class="chart-divider"> <!-- Figma 11:424 -->
+                        <img src="assets/images/image-placeholder-large.png" alt="Sales Chart Placeholder" class="chart-placeholder"> <!-- Placeholder for Figma 11:425 -->
+                        <!-- <canvas id="salesChart"></canvas> -->
+                    </div>
+                    <div class="chart-container"> <!-- Figma Group 11:417 -->
+                         <div class="chart-header">Monthly Data</div> <!-- Figma 11:419 -->
+                         <hr class="chart-divider"> <!-- Figma 11:420 -->
+                         <img src="assets/images/image-placeholder-large.png" alt="Monthly Data Chart Placeholder" class="chart-placeholder"> <!-- Placeholder for Figma 11:426 -->
+                         <!-- <canvas id="monthlyDataChart"></canvas> -->
+                    </div>
+                </div>
+
+                <!-- Tables Section -->
+                <div class="tables-section">
+                    <!-- Best Selling Table -->
+                    <div class="table-container"> <!-- Figma Group 11:322 -->
+                        <div class="table-header">BEST SELLING</div> <!-- Figma 11:324 -->
+                        <table class="data-table"> <!-- Figma Rect 11:325 -->
+                            <thead>
+                                <tr> <!-- Based on text elements 11:349, 11:355, 11:343, 11:337, 11:331 -->
+                                    <th>ID Product</th>
+                                    <th>Name Product</th>
+                                    <th>Category</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Example Row 1 -->
+                                <tr> <!-- Based on text elements 11:350, 11:356, 11:344, 11:338, 11:332 -->
+                                    <td>ID Product</td>
+                                    <td>Name Product</td>
+                                    <td>Category</td>
+                                    <td>Quantity</td>
+                                    <td>Total</td>
+                                </tr>
+                                <!-- Example Row 2 -->
+                                <tr> <!-- Based on text elements 11:351, 11:357, 11:345, 11:339, 11:333 -->
+                                    <td>ID Product</td>
+                                    <td>Name Product</td>
+                                    <td>Category</td>
+                                    <td>Quantity</td>
+                                    <td>Total</td>
+                                </tr>
+                                <!-- Add more rows as needed (up to 6 shown in Figma) -->
+                                <tr><td>ID Product</td><td>Name Product</td><td>Category</td><td>Quantity</td><td>Total</td></tr>
+                                <tr><td>ID Product</td><td>Name Product</td><td>Category</td><td>Quantity</td><td>Total</td></tr>
+                                <tr><td>ID Product</td><td>Name Product</td><td>Category</td><td>Quantity</td><td>Total</td></tr>
+                                <tr><td>ID Product</td><td>Name Product</td><td>Category</td><td>Quantity</td><td>Total</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Total Order Table -->
+                     <div class="table-container"> <!-- Figma Group 11:376 -->
+                        <div class="table-header">Total Order</div> <!-- Figma 11:378 -->
+                        <table class="data-table"> <!-- Figma Rect 11:379 -->
+                             <thead>
+                                <tr> <!-- Based on text elements 11:395, 11:400, 11:390, 11:380 -->
+                                    <th>ID Order</th>
+                                    <th>Name Customer</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                             <tbody>
+                                <!-- Example Row 1 -->
+                                <tr> <!-- Based on text elements 11:396, 11:401, 11:391, 11:381 -->
+                                    <td>ID Order</td>
+                                    <td>Name Customer</td>
+                                    <td>Quantity</td>
+                                    <td>Total</td>
+                                </tr>
+                                <!-- Example Row 2 -->
+                                <tr> <!-- Based on text elements 11:397, 11:402, 11:392, 11:382 -->
+                                    <td>ID Order</td>
+                                    <td>Name Customer</td>
+                                    <td>Quantity</td>
+                                    <td>Total</td>
+                                </tr>
+                                <!-- Add more rows as needed (up to 5 shown in Figma) -->
+                                <tr><td>ID Order</td><td>Name Customer</td><td>Quantity</td><td>Total</td></tr>
+                                <tr><td>ID Order</td><td>Name Customer</td><td>Quantity</td><td>Total</td></tr>
+                                <tr><td>ID Order</td><td>Name Customer</td><td>Quantity</td><td>Total</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Add JS file if needed -->
+    <!-- <script src="assets/js/statistics.js"></script> -->
+</body>
+</html>

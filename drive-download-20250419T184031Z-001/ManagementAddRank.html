@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Add Rank</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/ManagementAddRank.css">
+    <!-- Add Font Awesome if needed later -->
+</head>
+<body>
+    <div class="management-system">
+        <!-- Sidebar (Copied from Management_Customer_Account, paths adjusted, active item changed) -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="avatar-container">
+                    <!-- Using image from top-level images/ folder -->
+                    <img src="assets/images/455123067_1470091394391641_5075587184145921216_n.jpg" alt="User Avatar" class="avatar">
+                    <!-- Ellipse 5 seems like a status indicator -->
+                    <span class="status-indicator"></span>
+                </div>
+                <!-- Text from Figma 7:11 -->
+                <h2 class="user-name">Trung Trung</h2>
+                <!-- Text from Figma 7:12 -->
+                <p class="user-role">Manager</p>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <!-- Links adjusted relative to Management_Add_Rank -->
+                    <li class="nav-item">
+                        <a href="ManagementSystemAdd.html">
+                            <img src="assets/images/manage-system-icon.png" alt="" class="nav-icon"> <!-- Image from Figma 7:16 -->
+                            <span>Manage System</span> <!-- Text from Figma 7:15 -->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ManagementCustomerAccount.html"> <!-- Link to Customer Account page -->
+                            <img src="assets/images/manage-customer-icon.png" alt="" class="nav-icon"> <!-- Image from Figma 7:20 -->
+                            <span>Manage Customer</span> <!-- Text from Figma 7:19 -->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-order-icon.png" alt="" class="nav-icon"> <!-- Image from Figma 7:24 -->
+                            <span>Manage Order</span> <!-- Text from Figma 7:23 -->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-coupon-icon.png" alt="" class="nav-icon"> <!-- Image from Figma 7:28 -->
+                            <span>Manage Coupon</span> <!-- Text from Figma 7:27 -->
+                        </a>
+                    </li>
+                    <li class="nav-item active"> <!-- Set Management Rank as active -->
+                        <a href="#">
+                            <img src="assets/images/manage-rank-icon.png" alt="" class="nav-icon"> <!-- Image from Figma 7:32 -->
+                            <span>Management Rank</span> <!-- Text from Figma 7:31 -->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-statistics-icon.png" alt="" class="nav-icon"> <!-- Image from Figma 7:36 -->
+                            <span>Manage Statictis</span> <!-- Text from Figma 7:35 -->
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header similar to Management_Customer_Account -->
+            <header class="top-bar">
+                <h1 class="page-title">Management</h1> <!-- Text from Figma 7:40 -->
+                <div class="account-section">
+                     <a href="ProfileAdminEdit.html" title="Edit Profile">
+                        <img src="assets/images/account-icon-large.png" alt="Edit Profile" class="account-icon"> <!-- Link to Admin Edit Profile -->
+                    </a>
+                    <a href="index.html" title="Go to Home">
+                        <img src="assets/images/360_F_66468754_86IFi1dhqwtHdXzPeMQNhGtGp8Z2D3yC.jpg" alt="Go to Home" class="account-placeholder"> <!-- Link to Home -->
+                    </a>
+                </div>
+            </header>
+
+            <!-- Add/Edit/Remove Rank Section -->
+            <section class="add-rank-section">
+                <!-- Dropdown similar to Management_Add_Coupon -->
+                <div class="rank-action-dropdown-section">
+                    <div class="dropdown-container">
+                       <button class="rank-action-btn">
+                            Add Rank <span class="dropdown-arrow">▼</span> <!-- Default text, matches Figma 7:7 -->
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="ManagementEditRank.html">Edit Rank</a> <!-- Placeholder link -->
+                            <a href="ManagementRemoveRank.html">Remove Rank</a> <!-- Placeholder link -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form for Adding/Editing Rank -->
+                <form class="add-rank-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="rank-id">ID Rank:</label> <!-- Text from Figma 7:49 -->
+                            <input type="text" id="rank-id" name="rank-id"> <!-- Input from Figma 7:50 -->
+                        </div>
+                        <div class="form-group">
+                            <label for="rank-name">Name Rank:</label> <!-- Text from Figma 7:55 -->
+                            <input type="text" id="rank-name" name="rank-name"> <!-- Input from Figma 7:56 -->
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="rank-min">Min:</label> <!-- Text from Figma 7:43 -->
+                            <input type="number" id="rank-min" name="rank-min"> <!-- Input from Figma 7:44 -->
+                        </div>
+                        <div class="form-group">
+                            <label for="rank-max">Max:</label> <!-- Text from Figma 7:58 -->
+                            <input type="number" id="rank-max" name="rank-max"> <!-- Input from Figma 7:59 -->
+                        </div>
+                    </div>
+                    <div class="form-row">
+                         <div class="form-group">
+                            <label for="rank-discount">Discount:</label> <!-- Text from Figma 7:46 -->
+                            <input type="text" id="rank-discount" name="rank-discount"> <!-- Input from Figma 7:47 -->
+                        </div>
+                        <div class="form-group">
+                            <label for="rank-free-shipping">Free Shipping:</label> <!-- Text from Figma 7:61 -->
+                            <input type="text" id="rank-free-shipping" name="rank-free-shipping"> <!-- Input from Figma 7:62 -->
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                         <!-- Button styled like Add Coupon, based on Figma 7:52, 7:53 -->
+                        <button type="submit" class="submit-button">Submit</button>
+                    </div>
+                </form>
+
+                <div class="rank-info-section">
+                    <h3>Current Ranks</h3>
+                    <div class="rank-info-grid">
+                        <!-- Bronze Rank Info -->
+                        <div class="rank-card"> <!-- Based on Figma 7:63 -->
+                            <h4>Rank: Bronze</h4> <!-- Text from 7:69, 7:73 -->
+                            <hr> <!-- Line from 7:77 -->
+                            <p>0 - 1000 points</p> <!-- Text from 7:81 -->
+                            <p>Discount 5%</p> <!-- Text from 7:67 -->
+                            <p>Free shipping for orders over 200k vnđ</p> <!-- Text from 7:85 -->
+                        </div>
+                        <!-- Silver Rank Info -->
+                        <div class="rank-card"> <!-- Based on Figma 7:64 -->
+                             <h4>Rank: Silver</h4> <!-- Text from 7:70, 7:74 -->
+                             <hr> <!-- Line from 7:78 -->
+                             <p>1000 - 2000 points</p> <!-- Text from 7:82 -->
+                             <p>Discount 10%</p> <!-- Text from 7:68 -->
+                             <p>Free shipping for orders over 100k vnđ</p> <!-- Text from 7:86 -->
+                        </div>
+                        <!-- Gold Rank Info -->
+                        <div class="rank-card"> <!-- Based on Figma 7:65 -->
+                             <h4>Rank: Gold</h4> <!-- Text from 7:71, 7:75 -->
+                             <hr> <!-- Line from 7:79 -->
+                             <p>2000 - 5000 points</p> <!-- Text from 7:83 -->
+                             <p>Discount 15%</p> <!-- Assuming discount progression -->
+                             <p>Free shipping</p> <!-- Text from 7:87 -->
+                        </div>
+                        <!-- Platinum Rank Info -->
+                        <div class="rank-card"> <!-- Based on Figma 7:66 -->
+                             <h4>Rank: Platinum</h4> <!-- Text from 7:72, 7:76 -->
+                             <hr> <!-- Line from 7:80 -->
+                             <p>5000 - 10000 points</p> <!-- Text from 7:84 -->
+                             <p>Discount 20%</p> <!-- Assuming discount progression -->
+                             <p>Free shipping</p> <!-- Text from 7:87 -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Add JS file if needed -->
+    <!-- <script src="assets/js/main.js"></script> -->
+</body>
+</html>

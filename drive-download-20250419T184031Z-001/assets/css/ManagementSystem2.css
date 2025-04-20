@@ -1,0 +1,125 @@
+/* Management System 2 - Change Picture Popup Styles */
+
+body {
+    font-family: 'Itim', sans-serif; /* Default font for this modal */
+    background-color: rgba(0, 0, 0, 0.5); /* Dim background for modal effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.change-picture-modal {
+    /* Assuming the main frame 1:2022 represents the modal */
+    position: relative; /* For positioning the close button */
+    background-color: #FFFFFF; /* fill_IR6I1I */
+    border: 1px solid #9F9797; /* stroke_LJF1WC */
+    border-radius: 20px; /* borderRadius_20px */
+    padding: 30px 40px; /* Approximate padding */
+    width: 80%; /* Adjust width as needed */
+    max-width: 700px; /* Max width */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content {
+    /* Content within the modal */
+}
+
+.choose-label,
+.upload-label {
+    font-size: 24px; /* style_96L8AQ */
+    color: #000000; /* fill_3SZX21 */
+    margin-bottom: 15px;
+}
+
+.picture-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Responsive grid */
+    gap: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee; /* Separator */
+    padding-bottom: 30px;
+}
+
+.picture-option {
+    background-color: #D9D9D9; /* fill_D1M0YZ */
+    height: 80px; /* Approximate height */
+    border-radius: 5px; /* Slight rounding */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.picture-option:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Add style for selected option if needed */
+.picture-option.selected {
+    border: 2px solid #258DEE; /* Example selection indicator */
+}
+
+
+.upload-area {
+    border: 1px dashed #BAB7B7; /* stroke_MHQ0BS */
+    border-radius: 10px; /* borderRadius_10px */
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.upload-placeholder {
+    margin-bottom: 15px;
+}
+
+.upload-placeholder img {
+    width: 100px; /* Adjust size */
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.upload-btn {
+    font-size: 20px; /* style_96L8AQ (slightly smaller for button) */
+    color: #000000; /* fill_3SZX21 */
+    background-color: #D9D9D9; /* Match option background */
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-container {
+    text-align: center; /* Center the submit button */
+    margin-top: 20px;
+}
+
+.submit-btn {
+    display: inline-block; /* Make button fit content */
+    font-size: 24px; /* style_96L8AQ */
+    color: #000000; /* fill_3SZX21 */
+    background-color: #FFFFFF; /* fill_IR6I1I */
+    border: 1px solid #BAB7B7; /* stroke_MHQ0BS */
+    border-radius: 10px; /* borderRadius_10px */
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px; /* Adjust position */
+    right: 15px; /* Adjust position */
+    background: none;
+    border: none;
+    font-size: 28px; /* Make it larger */
+    line-height: 1;
+    color: #888;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}

@@ -1,0 +1,305 @@
+/* Import additional fonts from Figma */
+@import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
+
+/* General Layout */
+body {
+    display: flex; /* Use flexbox for overall layout */
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Default font */
+    background-color: #F6F6F6; /* Match base */
+}
+
+.management-system {
+    display: flex;
+    width: 100%;
+    min-height: 100vh; /* Ensure it takes full viewport height */
+}
+
+/* === Sidebar Styles (Copied from Management_Customer_Account) === */
+.sidebar {
+    width: 280px; /* Approximate width based on Figma */
+    background-color: #9194A3; /* Correct grey background from Figma 1:13 etc. */
+    border-right: 1px solid #ABA5A5; /* Figma Stroke R5SDNF */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.user-profile {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    /* No border needed here as it's part of the sidebar bg */
+}
+
+.avatar-container {
+    position: relative;
+    display: inline-block; /* Center the container */
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 80px; /* Adjust size as needed */
+    height: 80px;
+    border-radius: 50%; /* Circular avatar */
+    border: 2px solid #ddd; /* Optional border */
+    object-fit: cover; /* Ensure image covers the area */
+}
+
+.status-indicator {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: #4CAF50; /* Green status, adjust color */
+    border-radius: 50%;
+    border: 2px solid #FFFFFF; /* White border around status */
+}
+
+.user-name {
+    font-family: 'Imprima', sans-serif; /* Figma style_76DU5P */
+    font-size: 24px; /* Adjusted from 32px for better fit */
+    font-weight: 400;
+    color: #000000; /* Figma fill_KKAZ5O */
+    margin: 5px 0;
+}
+
+.user-role {
+    font-family: 'Inria Sans', sans-serif; /* Figma style_VD88CM */
+    font-size: 16px; /* Adjusted from 24px */
+    color: #000000; /* Figma fill_KKAZ5O */
+    margin: 0;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav .nav-item {
+    margin-bottom: 5px; /* Space between items */
+}
+
+.main-nav .nav-item a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #000000; /* Default text color black (Figma 0:50 etc.) */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: 'Inria Sans', sans-serif; /* Figma style_VD88CM */
+    font-size: 18px; /* Adjusted from 24px */
+    background-color: #9194A3; /* Default background (Figma 0:49 etc.) */
+    border: 1px solid #9194A3; /* Match background for non-active */
+}
+
+.main-nav .nav-item a:hover {
+    background-color: #a1a4b3; /* Darker grey hover effect */
+    border-color: #a1a4b3;
+}
+
+/* Active state for Manage Customer (adjust as needed for other pages) */
+.main-nav .nav-item.active a {
+    background-color: #FFFFFF; /* White background for active item (Figma 0:53) */
+    border: 1px solid #258DEE; /* Blue border for active item (Figma 0:53 stroke_H5CZC8) */
+    color: #000; /* Black text (Figma 0:54) */
+    font-weight: bold; /* Keep bold for emphasis */
+    padding: 11px 14px; /* Adjust padding slightly for border */
+}
+
+.main-nav .nav-icon {
+    width: 24px; /* Adjust icon size */
+    height: 24px;
+    margin-right: 15px;
+    object-fit: contain;
+}
+/* === End Sidebar Styles === */
+
+
+/* === Main Content Styles (Edit Customer Account) === */
+.main-content {
+    flex-grow: 1; /* Take remaining space */
+    padding: 25px;
+    background-color: #FFFFFF; /* Figma Rect 0:8 fill_KIJ2FR */
+    border-left: 1px solid #B7B2B2; /* Figma Rect 0:8 stroke_ZFQ4F1 */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+/* Re-use Top Bar styles from Management_Customer_Account */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee; /* Separator */
+}
+
+.page-title { /* For "Management" text 0:75 */
+    font-family: 'IM Fell English', serif; /* Figma style_PKT211 */
+    font-size: 24px;
+    color: #000000; /* Figma fill_KKAZ5O */
+    margin: 0;
+}
+
+.account-section {
+    display: flex;
+    align-items: center;
+}
+
+.account-section img {
+    width: 40px; /* Adjust size */
+    height: 40px;
+    margin-left: 15px;
+    border-radius: 50%; /* Make placeholder circular */
+}
+
+.account-icon { /* For Account image 0:9 */
+    /* Add specific styles if needed, assuming it's handled like avatar */
+     border: 1px solid #ccc; /* Example border */
+}
+
+.account-placeholder { /* For placeholder image 0:10 */
+     border: 1px solid #ccc; /* Example border */
+}
+
+/* Edit Form Specific Styles */
+.edit-customer-form {
+    /* background-color: #FFAAAA; /* Incorrect mapping - this is for title highlight */
+    padding: 30px;
+    border-radius: 10px; /* Guessing based on inputs */
+    max-width: 800px; /* Limit form width */
+    margin: 20px auto; /* Center form */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-title { /* For "Edit Customer Account" text 0:12 */
+    font-family: 'Inria Sans', sans-serif; /* Figma style_VD88CM */
+    font-size: 24px;
+    font-weight: 400;
+    color: #000000; /* Figma fill_KKAZ5O */
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #FFAAAA; /* Figma Rect 0:11 fill_Q7TLS6 - Apply highlight here */
+    display: inline-block; /* Make background fit text */
+    padding: 5px 10px; /* Add some padding */
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px 40px; /* Row gap and Column gap */
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-family: 'Itim', cursive; /* Figma style_FJMRVV */
+    font-size: 20px; /* Adjusted from 24px */
+    font-weight: 400;
+    color: #000000; /* Figma fill_KKAZ5O */
+    margin-bottom: 8px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    padding: 10px 15px;
+    border: 1px solid #ccc; /* Add a default border */
+    border-radius: 10px; /* Figma borderRadius */
+    background-color: #D9D9D9; /* Figma fill_HEGAP5 */
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif; /* Use default body font */
+    color: #333;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #9194A3; /* Match sidebar color on focus */
+    box-shadow: 0 0 5px rgba(145, 148, 163, 0.5);
+}
+
+.reset-password-section {
+    grid-column: 1 / -1; /* Span both columns */
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #000000; /* Figma Line 0:39/0:40 stroke_FYU5FF */
+}
+
+.reset-password-section label { /* For "Reset Password:" text 0:42 */
+    font-family: 'Itim', cursive; /* Figma style_FJMRVV */
+    font-size: 20px; /* Adjusted */
+    font-weight: 400;
+    color: #000000; /* Figma fill_KKAZ5O */
+    margin-bottom: 8px;
+    display: block; /* Make it block for spacing */
+}
+
+.reset-password-inputs {
+    display: flex;
+    gap: 20px;
+}
+
+.reset-password-inputs .form-group {
+    flex: 1; /* Make inputs share space */
+}
+
+/* Ensure password inputs take full width within their flex group */
+.reset-password-inputs .form-group input[type="password"] {
+    width: 100%;
+}
+
+.form-actions {
+    grid-column: 1 / -1; /* Span both columns */
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 30px;
+    border-radius: 10px; /* Figma borderRadius */
+    font-family: 'Itim', cursive; /* Figma style_FJMRVV */
+    font-size: 18px; /* Adjusted */
+    font-weight: 400;
+    color: #000000; /* Figma fill_KKAZ5O */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border: 1px solid #BAB7B7; /* Figma stroke_00201A */
+    background-color: #FFFFFF; /* Figma fill_KIJ2FR */
+}
+
+.btn:hover {
+    background-color: #f0f0f0;
+    border-color: #a0a0a0;
+}
+
+.btn-reset {
+    /* Specific styles for reset if needed */
+}
+
+.btn-submit {
+    /* Specific styles for submit if needed */
+    /* Example: Make submit button more prominent */
+    /* background-color: #4CAF50; */
+    /* color: white; */
+    /* border-color: #4CAF50; */
+}
+
+/* Ensure inputs inside reset section don't have extra margin */
+.reset-password-section .form-group {
+    margin-bottom: 0;
+}

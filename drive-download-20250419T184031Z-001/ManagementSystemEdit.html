@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management System</title>
+    <link rel="stylesheet" href="assets/boostrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/ManagementSystemEdit.css">
+    <!-- Add Font Awesome if needed for icons not provided in Figma -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> -->
+</head>
+<body>
+    <div class="management-system">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="avatar-container">
+                    <img src="assets/images/user-profile.png" alt="User Avatar" class="avatar">
+                    <!-- Ellipse 5 seems like a status indicator -->
+                    <span class="status-indicator"></span>
+                </div>
+                <h2 class="user-name">Trung Trung</h2>
+                <p class="user-role">Manager</p>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="nav-item active"> <!-- Mark Manage System as active based on Figma -->
+                        <a href="#">
+                            <img src="assets/images/manage-system-icon.png" alt="" class="nav-icon">
+                            <span>Manage System</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <img src="assets/images/manage-customer-icon.png" alt="" class="nav-icon">
+                            <span>Manage Customer</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <img src="assets/images/manage-order-icon.png" alt="" class="nav-icon">
+                            <span>Manage Order</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <img src="assets/images/manage-coupon-icon.png" alt="" class="nav-icon">
+                            <span>Manage Coupon</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <img src="assets/images/manage-rank-icon.png" alt="" class="nav-icon">
+                            <span>Management Rank</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <img src="assets/images/manage-statistics-icon.png" alt="" class="nav-icon">
+                            <span>Manage Statictis</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <h1 class="page-title">Management</h1>
+                <div class="account-section">
+                     <a href="ProfileAdminEdit.html" title="Edit Profile">
+                        <img src="assets/images/account-icon-large.png" alt="Edit Profile" class="account-icon"> <!-- Link to Admin Edit Profile -->
+                    </a>
+                    <a href="index.html" title="Go to Home">
+                        <img src="assets/images/360_F_66468754_86IFi1dhqwtHdXzPeMQNhGtGp8Z2D3yC.jpg" alt="Go to Home" class="account-placeholder"> <!-- Link to Home -->
+                    </a>
+                </div>
+            </header>
+
+            <section class="add-product-section">
+                 <!-- Dropdown for Product Actions -->
+                 <div class="product-action-dropdown-section"> <!-- Renamed class -->
+                     <div class="dropdown-container">
+                        <button class="product-action-btn"> <!-- Renamed class -->
+                            Edit Product <span class="dropdown-arrow">▼</span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="ManagementSystemSearch/">Search Product</a> <!-- Placeholder link -->
+                        </div>
+                     </div>
+                 </div>
+
+                <!-- Form for Adding Product -->
+                <form class="add-product-form" id="add-product-form"> <!-- Keep form for adding -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-id">ID Products:</label>
+                            <input type="text" id="product-id" name="product-id">
+                        </div>
+                        <div class="form-group">
+                            <label for="product-name">Name Product:</label>
+                            <input type="text" id="product-name" name="product-name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="price">Price:</label>
+                            <input type="text" id="price" name="price">
+                        </div>
+                         <div class="form-group">
+                            <label for="category">Category:</label>
+                            <input type="text" id="category" name="category">
+                        </div>
+                    </div>
+                     <div class="form-row">
+                        <div class="form-group">
+                            <label for="capital-price">Capital Price:</label>
+                            <input type="text" id="capital-price" name="capital-price">
+                        </div>
+                        <div class="form-group">
+                            <label for="discount">Discount:</label>
+                            <input type="text" id="discount" name="discount">
+                        </div>
+                    </div>
+                     <div class="form-row">
+                        <div class="form-group">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" name="quantity">
+                        </div>
+                        <div class="form-group status-group">
+                            <label for="status">Status</label>
+                            <!-- Changed to select element -->
+                            <select id="status" name="status" class="status-select">
+                                <option value="" disabled selected>Select Status</option> <!-- Placeholder -->
+                                <option value="available">Available</option>
+                                <option value="out-of-stock">Out of Stock</option>
+                                <option value="coming-soon">Coming Soon</option>
+                            </select>
+                        </div>
+                    </div>
+                     <div class="form-row">
+                        <div class="form-group">
+                            <label for="import-date">Import Date:</label>
+                            <input type="date" id="import-date" name="import-date"> <!-- Use type="date" -->
+                        </div>
+                         <div class="form-group detail-picture-group"> <!-- Moved this group inside the row -->
+                            <label>Detail Picture:</label>
+                            <div class="picture-upload-area">
+                                <button type="button" class="choose-pic-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Choose Picture</button>
+                                <!-- Display uploaded images here -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row"> <!-- New row for Describe -->
+                        <div class="form-group describe-group" style="flex: 2.1;"> <!-- Make describe span more width -->
+                           <label for="describe">Describe:</label>
+                           <textarea id="describe" name="describe"></textarea>
+                       </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="change-picture-modal">
+            <div class="modal-my-content">
+                <p class="choose-label">Choose a picture you want chance:</p> <!-- Text from 1:2025 -->
+                <div class="picture-options">
+                <!-- Placeholders for selectable pictures -->
+                <div class="picture-option"></div> <!-- Rectangle 86 -->
+                <div class="picture-option"></div> <!-- Rectangle 87 -->
+                <div class="picture-option"></div> <!-- Rectangle 88 -->
+                <div class="picture-option"></div> <!-- Rectangle 92 -->
+                <div class="picture-option"></div> <!-- Rectangle 89 -->
+                <!-- Removed the 7th div -->
+                </div>
+                <p class="upload-label">Upload a picture:</p> <!-- Text from 1:2026 -->
+                <div class="upload-area">
+                    <div class="upload-placeholder">
+                        <img src="assets/images/image-placeholder-large.png" alt="Upload Placeholder"> <!-- Ellipse 6 -->
+                    </div>
+                    <button type="button" class="upload-btn">Upload picture</button> <!-- Text from 1:2035 -->
+                    <input type="file" id="picture-upload-input" style="display: none;"> <!-- Hidden file input -->
+                </div>
+
+                <div class="submit-container">
+                    <button type="submit" class="submit-btn">Submit</button> <!-- Group 119 -->
+                </div>
+
+                <!-- Close button (Ellipse 5 - assuming it's a close button) -->
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- End Modal -->
+
+    <!-- Add JS file if needed -->
+    <!-- <script src="assets/js/main.js"></script> -->
+    <script src="assets/boostrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

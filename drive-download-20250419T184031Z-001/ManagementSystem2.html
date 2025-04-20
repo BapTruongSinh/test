@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Picture</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/ManagementSystem2.css">
+</head>
+<body>
+    <!-- Assuming this is a modal/popup -->
+    <div class="change-picture-modal">
+        <div class="modal-content">
+            <p class="choose-label">Choose a picture you want chance:</p> <!-- Text from 1:2025 -->
+            <div class="picture-options">
+                <!-- Placeholders for selectable pictures -->
+                <div class="picture-option"></div> <!-- Rectangle 86 -->
+                <div class="picture-option"></div> <!-- Rectangle 87 -->
+                <div class="picture-option"></div> <!-- Rectangle 88 -->
+                <div class="picture-option"></div> <!-- Rectangle 92 -->
+                <div class="picture-option"></div> <!-- Rectangle 89 -->
+                <div class="picture-option"></div> <!-- Rectangle 90 -->
+                <!-- Removed the 7th div -->
+            </div>
+
+            <p class="upload-label">Upload a picture to chance:</p> <!-- Text from 1:2026 -->
+            <div class="upload-area">
+                <div class="upload-placeholder">
+                     <img src="assets/images/image-placeholder-large.png" alt="Upload Placeholder"> <!-- Ellipse 6 -->
+                </div>
+                <button type="button" class="upload-btn">Upload picture</button> <!-- Text from 1:2035 -->
+                <input type="file" id="picture-upload-input" style="display: none;"> <!-- Hidden file input -->
+            </div>
+
+            <div class="submit-container">
+                 <button type="submit" class="submit-btn">Submit</button> <!-- Group 119 -->
+            </div>
+
+            <!-- Close button (Ellipse 5 - assuming it's a close button) -->
+            <button type="button" class="close-btn">&times;</button>
+        </div>
+    </div>
+</body>
+</html>

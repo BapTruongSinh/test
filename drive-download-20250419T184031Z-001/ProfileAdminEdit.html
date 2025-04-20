@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile Edit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/Profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app1__container">
+        <!-- Sidebar -->
+        <aside class="sidebar1">
+            <div class="user1-profile">
+                <div class="avatar-container1">
+                    <img id="sidebar-avatar" src="assets/images/455123067_1470091394391641_5075587184145921216_n.jpg" alt="User Avatar" class="avatar1" style="cursor: pointer;">
+                    <span class="status-indicator1"></span>
+                </div>
+                <h2 class="user-name1">Trung Trung</h2>
+                <p class="user-role1">Admin</p>
+            </div>
+            <nav class="profile-nav1">
+                <ul>
+                    <li class="profile1-nav-item active">
+                        <a href="#">
+                            <img src="assets/images/edit-246.png" alt="" class="profile-nav-icon1">
+                            <span>Edit Profile</span>
+                        </a>
+                    </li>
+                    <li class="profile1-nav-item">
+                         <a href="#">
+                            <img src="assets/images/chiakia.png" alt="" class="profile-nav-icon1">
+                            <span>Change Password</span>
+                        </a>
+                    </li>
+                    <!-- Additional sidebar items if needed -->
+                </ul>
+            </nav>
+        </aside>
+        <!-- Main Content -->
+        <main class="app1__content">
+            <header class="top-bar1">
+                <h1 class="page-title1">Profile</h1>
+                <div class="account-section1">
+                     <a href="ManagementSystemAdd.html" title="Go to Management">
+                        <img src="assets/images/manaaa.png" alt="Go to Management" class="account-icon">
+                    </a>
+                     <a href="ProfileAdminEdit.html" title="Edit Profile">
+                        <img src="assets/images/account-icon-large.png" alt="Edit Profile" class="account-icon">
+                    </a>
+                    <a href="index.html" title="Go to Home">
+                        <img src="assets/images/360_F_66468754_86IFi1dhqwtHdXzPeMQNhGtGp8Z2D3yC.jpg" alt="Go to Home" class="account-placeholder1">
+                    </a>
+                </div>
+            </header>
+            <div class="profile-content-wrapper1">
+                <section class="profile-details-form1">
+                    <form action="#" method="post">
+                        <div class="form-group1">
+                            <label for="username">UserName:</label>
+                            <input type="text" id="username" name="username" value="trungtrung">
+                        </div>
+                        <div class="form-group1">
+                            <label for="name">Name Customer:</label>
+                            <input type="text" id="name" name="name" value="Trung Trung">
+                        </div>
+                        <div class="form-group1">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" value="trung.example@email.com">
+                        </div>
+                        <div class="form-group1">
+                            <label for="phone">Phone:</label>
+                            <input type="tel" id="phone" name="phone" value="0123456789">
+                        </div>
+                        <div class="form-group1 gender-group1">
+                            <label>Gender:</label>
+                            <div class="radio-options1">
+                                <label for="gender-man">
+                                    <input type="radio" id="gender-man" name="gender" value="man" checked>
+                                    <span class="radio-label-text">Man</span>
+                                </label>
+                                <label for="gender-female">
+                                    <input type="radio" id="gender-female" name="gender" value="female">
+                                    <span class="radio-label-text">Female</span>
+                                </label>
+                                <label for="gender-other">
+                                    <input type="radio" id="gender-other" name="gender" value="other">
+                                    <span class="radio-label-text">Other</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group1 dob-group1">
+                              <label>Date Of Birth:</label>
+                              <div class="dob-selects1">
+                                  <div class="select-wrapper1">
+                                      <select id="dob-day" name="dob-day" required>
+                                          <option value="">Day</option>
+                                          <option value="1">1</option>
+                                          <!-- Additional day options -->
+                                      </select>
+                                      <img src="assets/images/muiten.png" alt="dropdown arrow" class="select-arrow1">
+                                  </div>
+                                  <div class="select-wrapper1">
+                                      <select id="dob-month" name="dob-month" required>
+                                          <option value="">Month</option>
+                                          <option value="1">Jan</option>
+                                          <!-- Additional month options -->
+                                      </select>
+                                      <img src="assets/images/muiten.png" alt="dropdown arrow" class="select-arrow1">
+                                  </div>
+                                  <div class="select-wrapper1">
+                                      <select id="dob-year" name="dob-year" required>
+                                          <option value="">Year</option>
+                                          <option value="2025">2025</option>
+                                          <!-- Additional year options -->
+                                      </select>
+                                      <img src="assets/images/muiten.png" alt="dropdown arrow" class="select-arrow1">
+                                  </div>
+                              </div>
+                         </div>
+                        <hr class="form-separator1">
+                        <div class="form-group1 submit-group1">
+                            <button type="submit" class="submit-button1">Submit</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </main>
+    </div>
+    <!-- Avatar Change Modal -->
+    <div id="avatar-modal" class="modal-overlay1">
+        <div class="modal1-content">
+            <span class="modal-close-btn1">&times;</span>
+            <h2>Upload your photo</h2>
+            <div class="modal-avatar-preview1">
+                <img id="modal-avatar-img" src="assets/images/455123067_1470091394391641_5075587184145921216_n.jpg" alt="Avatar Preview">
+            </div>
+            <div class="modal-buttons1">
+                 <label for="avatar-upload-input" class="modal-button1 upload-button">Upload</label>
+                 <input type="file" id="avatar-upload-input" accept="image/*" style="display: none;">
+                 <button class="modal-button1 submit-button">Submit</button>
+                 <button class="modal-button1 cancel-button">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/ProfileAdminEdit.js"></script>
+</body>
+</html>

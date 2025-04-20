@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Customer Account</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/ManagementEditCustomerAccount.css">
+    <!-- Add Font Awesome if needed later -->
+</head>
+<body>
+    <div class="management-system">
+        <!-- Sidebar (Copied from Management_Customer_Account, paths adjusted) -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="avatar-container">
+                    <!-- Using image from top-level images/ folder -->
+                    <img src="assets/images/455123067_1470091394391641_5075587184145921216_n.jpg" alt="User Avatar" class="avatar"> <!-- Figma 0:45 -->
+                    <!-- Ellipse 5 seems like a status indicator -->
+                    <span class="status-indicator"></span> <!-- Figma 0:44 -->
+                </div>
+                <!-- Text from Figma 0:46 -->
+                <h2 class="user-name">Trung Trung</h2>
+                <!-- Text from Figma 0:47 -->
+                <p class="user-role">Manager</p>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <!-- Navigation items based on Figma Groups 0:48 to 0:68 -->
+                    <li class="nav-item"> <!-- Figma Group 0:48 -->
+                        <a href="ManagementSystemAdd.html"> <!-- Link to other page -->
+                            <img src="assets/images/manage-system-icon.png" alt="" class="nav-icon"> <!-- Figma 0:51 -->
+                            <span>Manage System</span> <!-- Figma 0:50 -->
+                        </a>
+                    </li>
+                    <li class="nav-item active"> <!-- Figma Group 0:52 - Set Manage Customer as active -->
+                        <a href="ManagementCustomerAccount.html"> <!-- Link back to customer list -->
+                            <img src="assets/images/manage-customer-icon.png" alt="" class="nav-icon"> <!-- Figma 0:55 -->
+                            <span>Manage Customer</span> <!-- Figma 0:54 -->
+                        </a>
+                    </li>
+                    <li class="nav-item"> <!-- Figma Group 0:56 -->
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-order-icon.png" alt="" class="nav-icon"> <!-- Figma 0:59 -->
+                            <span>Manage Order</span> <!-- Figma 0:58 -->
+                        </a>
+                    </li>
+                    <li class="nav-item"> <!-- Figma Group 0:60 -->
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-coupon-icon.png" alt="" class="nav-icon"> <!-- Figma 0:63 -->
+                            <span>Manage Coupon</span> <!-- Figma 0:62 -->
+                        </a>
+                    </li>
+                    <li class="nav-item"> <!-- Figma Group 0:64 -->
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-rank-icon.png" alt="" class="nav-icon"> <!-- Figma 0:67 -->
+                            <span>Management Rank</span> <!-- Figma 0:66 -->
+                        </a>
+                    </li>
+                    <li class="nav-item"> <!-- Figma Group 0:68 -->
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-statistics-icon.png" alt="" class="nav-icon"> <!-- Figma 0:71 -->
+                            <span>Manage Statictis</span> <!-- Figma 0:70 -->
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar (Reused structure) -->
+            <header class="top-bar">
+                <h1 class="page-title">Management</h1> <!-- Text from Figma 0:75 -->
+                <div class="account-section">
+                     <a href="ProfileAdminEdit.html" title="Edit Profile">
+                        <img src="assets/images/account-icon-large.png" alt="Edit Profile" class="account-icon"> <!-- Link to Admin Edit Profile -->
+                    </a>
+                    <a href="index.html" title="Go to Home">
+                        <img src="assets/images/360_F_66468754_86IFi1dhqwtHdXzPeMQNhGtGp8Z2D3yC.jpg" alt="Go to Home" class="account-placeholder"> <!-- Link to Home -->
+                    </a>
+                </div>
+            </header>
+
+            <!-- Edit Customer Form Section -->
+            <section class="edit-customer-form"> <!-- Mapped to Figma Rect 0:11 -->
+                <h2 class="form-title">Edit Customer Account</h2> <!-- Text from Figma 0:12 -->
+
+                <form action="#" method="post"> <!-- Add form element -->
+                    <div class="form-grid">
+                        <!-- Group 107: ID Customer -->
+                        <div class="form-group"> <!-- Mapped to Figma Group 0:13 -->
+                            <label for="customer-id">ID Customer:</label> <!-- Text 0:14 -->
+                            <input type="text" id="customer-id" name="customer-id" readonly value="KH001"> <!-- Example value, make readonly -->
+                        </div>
+
+                        <!-- Group 108: Name Customer -->
+                        <div class="form-group"> <!-- Mapped to Figma Group 0:35 -->
+                            <label for="customer-name">Name Customer:</label> <!-- Text 0:36 -->
+                            <input type="text" id="customer-name" name="customer-name" value="Nguyễn Văn A"> <!-- Example value -->
+                        </div>
+
+                        <!-- Group 109: Phone -->
+                        <div class="form-group"> <!-- Mapped to Figma Group 0:16 -->
+                            <label for="customer-phone">Phone:</label> <!-- Text 0:17 -->
+                            <input type="text" id="customer-phone" name="customer-phone" value="0987654321"> <!-- Example value -->
+                        </div>
+
+                        <!-- Group 111: Email -->
+                        <div class="form-group"> <!-- Mapped to Figma Group 0:32 -->
+                            <label for="customer-email">Email:</label> <!-- Text 0:33 -->
+                            <input type="email" id="customer-email" name="customer-email" value="nguyenvana@example.com"> <!-- Example value -->
+                        </div>
+
+                         <!-- Group 112: Rank -->
+                         <div class="form-group"> <!-- Mapped to Figma Group 0:19 -->
+                            <label for="customer-rank">Rank:</label> <!-- Text 0:20 -->
+                            <input type="text" id="customer-rank" name="customer-rank" readonly value="Gold"> <!-- Example value, make readonly -->
+                        </div>
+
+                        <!-- Group 110: Status -->
+                        <div class="form-group"> <!-- Mapped to Figma Group 0:29 -->
+                            <label for="customer-status">Status:</label> <!-- Text 0:30 -->
+                            <input type="text" id="customer-status" name="customer-status" readonly value="Active"> <!-- Example value, make readonly -->
+                        </div>
+
+                        <!-- Reset Password Section -->
+                        <div class="reset-password-section"> <!-- Mapped to Figma Group 0:118 & Line 0:39/0:40 -->
+                            <label>Reset Password:</label> <!-- Text 0:42 -->
+                            <div class="reset-password-inputs"> <!-- Mapped to Figma Group 0:114 -->
+                                <div class="form-group">
+                                    <label for="new-password">New Password:</label> <!-- Text 0:23 (Implied) -->
+                                    <input type="password" id="new-password" name="new-password" placeholder="Enter new password"> <!-- Rect 0:24 -->
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm-password">Confirm Password:</label> <!-- Text 0:23 (Implied) -->
+                                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm new password"> <!-- Rect 0:25 -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Form Actions -->
+                        <div class="form-actions">
+                             <!-- Group 115: Reset Button -->
+                            <button type="reset" class="btn btn-reset">Reset</button> <!-- Mapped to Figma Group 0:26, Text 0:28 -->
+                             <!-- Group 119: Submit Button -->
+                            <button type="submit" class="btn btn-submit">Submit</button> <!-- Mapped to Figma Group 0:72, Text 0:74 -->
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Add JS file if needed -->
+    <!-- <script src="assets/js/main.js"></script> -->
+</body>
+</html>

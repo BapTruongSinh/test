@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Customer Account</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/ManagementCustomerAccount.css">
+    <!-- Add Font Awesome if needed later -->
+</head>
+<body>
+    <div class="management-system">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="avatar-container">
+                    <!-- Using image from top-level images/ folder -->
+                    <img src="assets/images/455123067_1470091394391641_5075587184145921216_n.jpg" alt="User Avatar" class="avatar">
+                    <!-- Ellipse 5 seems like a status indicator -->
+                    <span class="status-indicator"></span>
+                </div>
+                <!-- Text from Figma 1:10 -->
+                <h2 class="user-name">Trung Trung</h2>
+                <!-- Text from Figma 1:11 -->
+                <p class="user-role">Manager</p>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <!-- Copied from Management_System1, paths adjusted -->
+                    <li class="nav-item">
+                        <a href="ManagementSystemAdd.html"> <!-- Link to other page -->
+                            <img src="assets/images/manage-system-icon.png" alt="" class="nav-icon">
+                            <span>Manage System</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active"> <!-- Set Manage Customer as active -->
+                        <a href="#">
+                            <img src="assets/images/manage-customer-icon.png" alt="" class="nav-icon">
+                            <span>Manage Customer</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-order-icon.png" alt="" class="nav-icon">
+                            <span>Manage Order</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-coupon-icon.png" alt="" class="nav-icon">
+                            <span>Manage Coupon</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-rank-icon.png" alt="" class="nav-icon">
+                            <span>Management Rank</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-statistics-icon.png" alt="" class="nav-icon">
+                            <span>Manage Statictis</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header similar to Management_System1, adjusted for Figma 1:36, 1:120, 1:37, 1:38 -->
+            <header class="top-bar">
+                <h1 class="page-title">Management</h1> <!-- Text from Figma 1:120 -->
+                <div class="account-section">
+                     <a href="ProfileAdminEdit.html" title="Edit Profile">
+                        <img src="assets/images/account-icon-large.png" alt="Edit Profile" class="account-icon"> <!-- Link to Admin Edit Profile -->
+                    </a>
+                    <a href="index.html" title="Go to Home">
+                        <img src="/images/360_F_66468754_86IFi1dhqwtHdXzPeMQNhGtGp8Z2D3yC.jpg" alt="Go to Home" class="account-placeholder"> <!-- Link to Home -->
+                    </a>
+                </div>
+            </header>
+
+            <!-- Customer Filters/Search Section based on Figma 1:39, 1:42, 1:45, 1:48 -->
+            <section class="customer-filters">
+                <div class="filter-group">
+                    <label for="customer-id">ID Customer:</label>
+                    <input type="text" id="customer-id" name="customer-id" placeholder=""> <!-- Placeholder from Rect 1:47 -->
+                </div>
+                <div class="filter-group">
+                    <label for="customer-name">Name Customer:</label>
+                    <input type="text" id="customer-name" name="customer-name" placeholder=""> <!-- Placeholder from Rect 1:50 -->
+                </div>
+                 <div class="filter-group">
+                    <label for="customer-rank">Rank:</label>
+                    <input type="text" id="customer-rank" name="customer-rank" placeholder=""> <!-- Placeholder from Rect 1:44 -->
+                </div>
+                <button class="search-button">Search</button> <!-- Button from Group 1:117 -->
+            </section>
+
+            <!-- Customer Table Section based on Figma 1:54 onwards -->
+            <section class="customer-table-section">
+                <table class="customer-table">
+                    <thead>
+                        <tr>
+                            <th>ID Customer</th> <!-- Text 1:67 -->
+                            <th>Name Customer</th> <!-- Text 1:73 -->
+                            <th>Rank</th> <!-- Text 1:79 -->
+                            <th>Phone</th> <!-- Text 1:85 -->
+                            <th>Email</th> <!-- Text 1:91 -->
+                            <th>Operation</th> <!-- Text 1:97 -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example Row 1 (Repeat structure for 1:68-1:104) -->
+                        <tr>
+                            <td>ID Customer</td> <!-- Text 1:68 -->
+                            <td>Name Customer</td> <!-- Text 1:74 -->
+                            <td>Rank</td> <!-- Text 1:80 -->
+                            <td>Phone</td> <!-- Text 1:86 -->
+                            <td>Email</td> <!-- Text 1:92 -->
+                            <td class="operations"> <!-- Match class from Search -->
+                                <button class="operation-btn edit-btn" title="Edit"> <!-- Match classes -->
+                                    <img src="assets/images/edit-icon.png" alt="Edit">
+                                </button>
+                                <button class="operation-btn delete-btn" title="Delete"> <!-- Match classes -->
+                                     <img src="assets/images/542724.png" alt="Delete"> <!-- Use correct delete icon -->
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Example Row 2 (Repeat structure for 1:69-1:109) -->
+                         <tr>
+                            <td>ID Customer</td> <!-- Text 1:69 -->
+                            <td>Name Customer</td> <!-- Text 1:75 -->
+                            <td>Rank</td> <!-- Text 1:81 -->
+                            <td>Phone</td> <!-- Text 1:87 -->
+                            <td>Email</td> <!-- Text 1:93 -->
+                            <td class="operations">
+                                <button class="operation-btn edit-btn" title="Edit">
+                                    <img src="assets/images/edit-icon.png" alt="Edit">
+                                </button>
+                                <button class="operation-btn delete-btn" title="Delete">
+                                     <img src="assets/images/542724.png" alt="Delete">
+                                </button>
+                            </td>
+                        </tr>
+                         <!-- Example Row 3 (Repeat structure for 1:70-1:112) -->
+                         <tr>
+                            <td>ID Customer</td> <!-- Text 1:70 -->
+                            <td>Name Customer</td> <!-- Text 1:76 -->
+                            <td>Rank</td> <!-- Text 1:82 -->
+                            <td>Phone</td> <!-- Text 1:88 -->
+                            <td>Email</td> <!-- Text 1:94 -->
+                            <td class="operations">
+                                <button class="operation-btn edit-btn" title="Edit">
+                                    <img src="assets/images/edit-icon.png" alt="Edit">
+                                </button>
+                                <button class="operation-btn delete-btn" title="Delete">
+                                     <img src="assets/images/542724.png" alt="Delete">
+                                </button>
+                            </td>
+                        </tr>
+                         <!-- Example Row 4 (Repeat structure for 1:71-1:115) -->
+                         <tr>
+                            <td>ID Customer</td> <!-- Text 1:71 -->
+                            <td>Name Customer</td> <!-- Text 1:77 -->
+                            <td>Rank</td> <!-- Text 1:83 -->
+                            <td>Phone</td> <!-- Text 1:89 -->
+                            <td>Email</td> <!-- Text 1:95 -->
+                            <td class="operations">
+                                <button class="operation-btn edit-btn" title="Edit">
+                                    <img src="assets/images/edit-icon.png" alt="Edit">
+                                </button>
+                                <button class="operation-btn delete-btn" title="Delete">
+                                     <img src="assets/images/542724.png" alt="Delete">
+                                </button>
+                            </td>
+                        </tr>
+                         <!-- Example Row 5 (Repeat structure for 1:72-1:118) -->
+                         <tr>
+                            <td>ID Customer</td> <!-- Text 1:72 -->
+                            <td>Name Customer</td> <!-- Text 1:78 -->
+                            <td>Rank</td> <!-- Text 1:84 -->
+                            <td>Phone</td> <!-- Text 1:90 -->
+                            <td>Email</td> <!-- Text 1:96 -->
+                            <td class="operations">
+                                <button class="operation-btn edit-btn" title="Edit">
+                                    <img src="assets/images/edit-icon.png" alt="Edit">
+                                </button>
+                                <button class="operation-btn delete-btn" title="Delete">
+                                     <img src="assets/images/542724.png" alt="Delete">
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+                <div class="table-footer">
+                    <span>Show 7 customer:</span> <!-- Text from 1:119 -->
+                    <!-- Add pagination controls if necessary -->
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Add JS file if needed -->
+    <!-- <script src="assets/js/main.js"></script> -->
+</body>
+</html>

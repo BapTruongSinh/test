@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Address - Profile</title> <!-- Changed title -->
+    <!-- Link to CSS files within this directory -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/Profile.css"> <!-- Updated CSS link -->
+</head>
+<body>
+    <div class="profile-customer-page6"> <!-- Updated class -->
+        <!-- Sidebar copied, paths adjusted, active state maintained -->
+        <aside class="sidebar6"> <!-- Updated class -->
+            <div class="user-profile6"> <!-- Updated class -->
+                <div class="avatar-container6"> <!-- Updated class -->
+                    <img src="assets/images/455123067_1470091394391641_5075587184145921216_n.jpg" alt="User Avatar" class="avatar6"> <!-- Updated class -->
+                    <span class="status-indicator6"></span> <!-- Updated class -->
+                </div>
+                <h2 class="user-name6">Trung Trung</h2> <!-- Updated class -->
+                <p class="user-role6">Customer</p> <!-- Updated class -->
+            </div>
+            <nav class="profile-nav6"> <!-- Updated class -->
+                <ul>
+                    <!-- Item 1: Edit Profile -->
+                    <li class="profile-nav-item6"> <!-- Updated class -->
+                        <a href="ProfileEditCustomer.html">
+                            <img src="assets/images/edit-246.png" alt="" class="profile-nav-icon6"> <!-- Updated class -->
+                            <span>Edit Profile</span>
+                        </a>
+                    </li>
+                    <!-- Item 2: Change Password -->
+                    <li class="profile-nav-item6"> <!-- Updated class -->
+                         <a href="ProfileCustomerPassword.html">
+                            <img src="assets/images/chiakia.png" alt="" class="profile-nav-icon6"> <!-- Updated class -->
+                            <span>Change Password</span>
+                        </a>
+                    </li>
+                    <!-- Item 3: Address (Active) -->
+                    <li class="profile-nav-item6 active"> <!-- Updated class (kept active) -->
+                         <a href="ProfileCustomerAddress.html"> <!-- Link back to address list -->
+                            <img src="assets/images/vitri.png" alt="" class="profile-nav-icon6"> <!-- Updated class -->
+                            <span>Address</span>
+                        </a>
+                    </li>
+                    <!-- Item 4: Coupon -->
+                    <li class="profile-nav-item6"> <!-- Updated class -->
+                         <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/gift-coupon-icon-20763.png" alt="" class="profile-nav-icon6"> <!-- Updated class -->
+                            <span>Coupon</span>
+                        </a>
+                    </li>
+                     <!-- Item 5: Rank -->
+                    <li class="profile-nav-item6"> <!-- Updated class -->
+                         <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-rank-icon.png" alt="" class="profile-nav-icon6"> <!-- Updated class -->
+                            <span>Rank</span>
+                            <span class="rank-value6">: Gold</span> <!-- Updated class -->
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content6"> <!-- Updated class -->
+            <!-- Header section (Similar to previous profile pages) -->
+             <header class="top-bar6"> <!-- Updated class -->
+                <h1 class="page-title6">Profile</h1> <!-- Updated class -->
+                <div class="account-section6"> <!-- Updated class -->
+                    <img src="assets/images/account-icon-large.png" alt="Account" class="account-icon"> <!-- Kept original class -->
+                    <img src="assets/images/360_F_66468754_86IFi1dhqwtHdXzPeMQNhGtGp8Z2D3yC.jpg" alt="Account Placeholder" class="account-placeholder6"> <!-- Updated class -->
+                </div>
+            </header>
+
+            <!-- Edit Address Content Area -->
+            <div class="profile-content-wrapper6"> <!-- Updated class -->
+                <section class="add-address-section6"> <!-- Updated class -->
+                    <h2>Edit Address</h2> <!-- Changed heading -->
+                    <form action="#" method="post" class="add-address-form6"> <!-- Updated class -->
+                        <div class="form-row6"> <!-- Updated class -->
+                            <div class="form-group6"> <!-- Updated class -->
+                                <label for="name">Full Name</label>
+                                <!-- Added value attribute for editing -->
+                                <input type="text" id="name" name="name" required placeholder="Enter full name" value="Trung Trung">
+                            </div>
+                            <div class="form-group6"> <!-- Updated class -->
+                                <label for="phone">Phone Number</label>
+                                <!-- Added value attribute for editing -->
+                                <input type="tel" id="phone" name="phone" required placeholder="Enter phone number" value="0853364475">
+                            </div>
+                        </div>
+                        <div class="form-group6"> <!-- Updated class -->
+                             <label for="province">Province/City</label>
+                             <select id="province" name="province" required>
+                                 <option value="" disabled>Select Province/City</option>
+                                 <!-- Added selected attribute -->
+                                 <option value="danang" selected>Đà Nẵng</option>
+                                 <option value="hanoi">Hà Nội</option>
+                                 <option value="hcm">Hồ Chí Minh</option>
+                             </select>
+                        </div>
+                        <div class="form-group6"> <!-- Updated class -->
+                             <label for="district">District</label>
+                             <select id="district" name="district" required>
+                                 <option value="" disabled>Select District</option>
+                                 <!-- Added selected attribute -->
+                                  <option value="lienchieu" selected>Liên Chiểu</option>
+                                  <option value="haichau">Hải Châu</option>
+                             </select>
+                        </div>
+                         <div class="form-group6"> <!-- Updated class -->
+                             <label for="ward">Ward</label>
+                             <select id="ward" name="ward" required>
+                                 <option value="" disabled>Select Ward</option>
+                                 <!-- Added selected attribute -->
+                                 <option value="hoakhanhnam" selected>Hòa Khánh Nam</option>
+                                 <option value="hoakhanhbac">Hòa Khánh Bắc</option>
+                             </select>
+                        </div>
+                        <div class="form-group6"> <!-- Updated class -->
+                            <label for="street-address">Street Name, Building, House No.</label>
+                            <!-- Added value attribute for editing -->
+                            <input type="text" id="street-address" name="street-address" required placeholder="Enter street address details" value="123 Đường ABC">
+                        </div>
+
+                        <div class="form-group6 checkbox-group6"> <!-- Updated classes -->
+                            <!-- Added checked attribute -->
+                            <input type="checkbox" id="set-default" name="set-default" value="true" checked>
+                            <label for="set-default">Set as Default Address</label>
+                        </div>
+
+                        <div class="form-actions6"> <!-- Updated class -->
+                            <button type="submit" class="submit-btn6">Update Address</button> <!-- Updated class -->
+                            <a href="ProfileCustomerAddress.html" class="cancel-btn6">Cancel</a> <!-- Updated class -->
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add JS file if needed for dynamic dropdowns -->
+    <!-- <script src="assets/js/address.js"></script> -->
+</body>
+</html>

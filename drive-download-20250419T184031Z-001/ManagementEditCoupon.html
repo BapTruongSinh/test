@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Coupon</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/ManagementEditCoupon.css">
+    <!-- Add Font Awesome if needed later -->
+</head>
+<body>
+    <div class="management-system">
+        <!-- Sidebar (Copied from Management_Customer_Account, paths adjusted) -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="avatar-container">
+                    <img src="assets/images/455123067_1470091394391641_5075587184145921216_n.jpg" alt="User Avatar" class="avatar"> <!-- Figma 3:37 -->
+                    <span class="status-indicator"></span> <!-- Figma 3:36 -->
+                </div>
+                <h2 class="user-name">Trung Trung</h2> <!-- Figma 3:38 -->
+                <p class="user-role">Manager</p> <!-- Figma 3:39 -->
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <!-- Navigation items based on Figma Groups 3:40 to 3:60 -->
+                    <li class="nav-item"> <!-- Figma Group 3:40 -->
+                        <a href="ManagementSystemAdd.html">
+                            <img src="assets/images/manage-system-icon.png" alt="" class="nav-icon"> <!-- Figma 3:43 -->
+                            <span>Manage System</span> <!-- Figma 3:42 -->
+                        </a>
+                    </li>
+                    <li class="nav-item"> <!-- Figma Group 3:44 -->
+                         <a href="ManagementCustomerAccount.html">
+                            <img src="assets/images/manage-customer-icon.png" alt="" class="nav-icon"> <!-- Figma 3:47 -->
+                            <span>Manage Customer</span> <!-- Figma 3:46 -->
+                        </a>
+                    </li>
+                    <li class="nav-item"> <!-- Figma Group 3:48 -->
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-order-icon.png" alt="" class="nav-icon"> <!-- Figma 3:51 -->
+                            <span>Manage Order</span> <!-- Figma 3:50 -->
+                        </a>
+                    </li>
+                    <li class="nav-item active"> <!-- Figma Group 3:52 - Set Manage Coupon as active -->
+                        <a href="ManagementCouponSearch.html"> <!-- Link back to coupon search -->
+                            <img src="assets/images/manage-coupon-icon.png" alt="" class="nav-icon"> <!-- Figma 3:55 -->
+                            <span>Manage Coupon</span> <!-- Figma 3:54 -->
+                        </a>
+                    </li>
+                    <li class="nav-item"> <!-- Figma Group 3:56 -->
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-rank-icon.png" alt="" class="nav-icon"> <!-- Figma 3:59 -->
+                            <span>Management Rank</span> <!-- Figma 3:58 -->
+                        </a>
+                    </li>
+                    <li class="nav-item"> <!-- Figma Group 3:60 -->
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-statistics-icon.png" alt="" class="nav-icon"> <!-- Figma 3:63 -->
+                            <span>Manage Statictis</span> <!-- Figma 3:62 -->
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar (Reused structure) -->
+            <header class="top-bar">
+                <h1 class="page-title">Management</h1> <!-- Text from Figma 3:64 -->
+                <div class="account-section">
+                     <a href="ProfileAdminEdit.html" title="Edit Profile">
+                        <img src="assets/images/account-icon-large.png" alt="Edit Profile" class="account-icon"> <!-- Link to Admin Edit Profile -->
+                    </a>
+                    <a href="index.html" title="Go to Home">
+                        <img src="assets/images/360_F_66468754_86IFi1dhqwtHdXzPeMQNhGtGp8Z2D3yC.jpg" alt="Go to Home" class="account-placeholder"> <!-- Link to Home -->
+                    </a>
+                </div>
+            </header>
+
+            <!-- Edit Coupon Form Section -->
+            <section class="edit-coupon-form"> <!-- Mapped to Figma Rect 3:6 -->
+                <h2 class="form-title">Edit Coupon</h2> <!-- Text from Figma 3:7 -->
+
+                <form action="#" method="post"> <!-- Add form element -->
+                    <div class="form-grid">
+                        <!-- Group 107: ID Coupon -->
+                        <div class="form-group"> <!-- Mapped to Figma Group 3:8 -->
+                            <label for="coupon-id">ID Coupon:</label> <!-- Text 3:9 -->
+                            <input type="text" id="coupon-id" name="coupon-id" readonly value="CP001"> <!-- Example value, make readonly -->
+                        </div>
+
+                        <!-- Group 108: Name Coupon -->
+                        <div class="form-group"> <!-- Mapped to Figma Group 3:29 -->
+                            <label for="coupon-name">Name Coupon:</label> <!-- Text 3:30 -->
+                            <input type="text" id="coupon-name" name="coupon-name" value="Summer Sale"> <!-- Example value -->
+                        </div>
+
+                        <!-- Group 109: Discount -->
+                        <div class="form-group"> <!-- Mapped to Figma Group 3:11 -->
+                            <label for="coupon-discount">Discount:</label> <!-- Text 3:12 -->
+                            <input type="text" id="coupon-discount" name="coupon-discount" value="15%"> <!-- Example value -->
+                        </div>
+
+                        <!-- Group 111: Quantity -->
+                        <div class="form-group"> <!-- Mapped to Figma Group 3:26 -->
+                            <label for="coupon-quantity">Quantity:</label> <!-- Text 3:27 -->
+                            <input type="number" id="coupon-quantity" name="coupon-quantity" value="100"> <!-- Example value -->
+                        </div>
+
+                         <!-- Group 112: Date Start -->
+                         <div class="form-group"> <!-- Mapped to Figma Group 3:14 -->
+                            <label for="coupon-date-start">Date Start:</label> <!-- Text 3:15 -->
+                            <input type="date" id="coupon-date-start" name="coupon-date-start" value="2024-06-01"> <!-- Example value -->
+                        </div>
+
+                        <!-- Group 110: Date Begin (Interpreted as Date End) -->
+                        <div class="form-group"> <!-- Mapped to Figma Group 3:23 -->
+                            <label for="coupon-date-end">Date End:</label> <!-- Text 3:24 (Label changed) -->
+                            <input type="date" id="coupon-date-end" name="coupon-date-end" value="2024-07-01"> <!-- Example value -->
+                        </div>
+
+                        <!-- Form Actions -->
+                        <div class="form-actions">
+                             <!-- Group 115: Submit Button -->
+                            <button type="submit" class="btn-submit">Submit</button> <!-- Mapped to Figma Group 3:20, Text 3:22 -->
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Add JS file if needed -->
+    <!-- <script src="assets/js/main.js"></script> -->
+</body>
+</html>

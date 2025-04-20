@@ -1,0 +1,372 @@
+/* Import additional fonts from Figma */
+@import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
+
+/* General Layout */
+body {
+    display: flex; /* Use flexbox for overall layout */
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Default font */
+    background-color: #F6F6F6; /* Match base */
+}
+
+.management-system {
+    display: flex;
+    width: 100%;
+    min-height: 100vh; /* Ensure it takes full viewport height */
+}
+
+/* === Sidebar Styles (Copied from Management_Customer_Account) === */
+.sidebar {
+    width: 280px; /* Approximate width based on Figma */
+    background-color: #9194A3; /* Correct grey background from Figma 1:4 etc. */
+    border-right: 1px solid #ABA5A5; /* Figma Stroke 1:4 */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.user-profile {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.avatar-container {
+    position: relative;
+    display: inline-block; /* Center the container */
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 80px; /* Adjust size as needed */
+    height: 80px;
+    border-radius: 50%; /* Circular avatar */
+    border: 2px solid #ddd; /* Optional border */
+    object-fit: cover; /* Ensure image covers the area */
+}
+
+.status-indicator { /* Figma 1:5 */
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: #4CAF50; /* Green status, adjust color */
+    border-radius: 50%;
+    border: 2px solid #FFFFFF; /* White border around status */
+}
+
+.user-name { /* Figma 1:7 */
+    font-family: 'Imprima', sans-serif; /* Figma style_CSASPW */
+    font-size: 24px; /* Adjusted from 32px */
+    font-weight: 400;
+    color: #000000; /* Figma fill_IDIZ6P */
+    margin: 5px 0;
+}
+
+.user-role { /* Figma 1:8 */
+    font-family: 'Inria Sans', sans-serif; /* Figma style_F59K7D */
+    font-size: 16px; /* Adjusted from 24px */
+    color: #000000; /* Figma fill_IDIZ6P */
+    margin: 0;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav .nav-item {
+    margin-bottom: 5px; /* Space between items */
+}
+
+.main-nav .nav-item a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #000000; /* Default text color black (Figma 1:11 etc.) */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: 'Inria Sans', sans-serif; /* Figma style_F59K7D */
+    font-size: 18px; /* Adjusted from 24px */
+    background-color: #9194A3; /* Default background (Figma 1:10 etc.) */
+    border: 1px solid #9194A3; /* Match background for non-active */
+}
+
+.main-nav .nav-item a:hover {
+    background-color: #a1a4b3; /* Darker grey hover effect */
+    border-color: #a1a4b3;
+}
+
+/* Active state for Manage Coupon */
+.main-nav .nav-item.active a {
+    background-color: #FFFFFF; /* White background for active item (Figma 1:22) */
+    border: 1px solid #2044E3; /* Blue border for active item (Figma 1:22 stroke_YWCB8L) */
+    color: #000; /* Black text (Figma 1:23) */
+    font-weight: bold; /* Keep bold for emphasis */
+    padding: 11px 14px; /* Adjust padding slightly for border */
+}
+
+.main-nav .nav-icon {
+    width: 24px; /* Adjust icon size */
+    height: 24px;
+    margin-right: 15px;
+    object-fit: contain;
+}
+/* === End Sidebar Styles === */
+
+
+/* === Main Content Styles (Coupon Search) === */
+.main-content {
+    flex-grow: 1; /* Take remaining space */
+    padding: 25px;
+    background-color: #FFFFFF; /* Figma Rect 1:33 fill_ME163W */
+    border-left: 1px solid #B7B2B2; /* Figma Rect 1:33 stroke_10C959 */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+/* Re-use Top Bar styles */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee; /* Separator */
+}
+
+.page-title { /* For "Management" text 1:114 */
+    font-family: 'IM Fell English', serif; /* Figma style_D4MKUJ */
+    font-size: 24px;
+    color: #000000; /* Figma fill_IDIZ6P */
+    margin: 0;
+}
+
+.account-section {
+    display: flex;
+    align-items: center;
+}
+
+.account-section img {
+    width: 40px; /* Adjust size */
+    height: 40px;
+    margin-left: 15px;
+    border-radius: 50%; /* Make placeholder circular */
+}
+
+.account-icon { /* For Account image 1:34 */
+     border: 1px solid #ccc; /* Example border */
+}
+
+.account-placeholder { /* For placeholder image 1:35 */
+     border: 1px solid #ccc; /* Example border */
+}
+
+/* Search/Add Coupon Dropdown Section */
+.search-toggle-section {
+    margin-bottom: 20px; /* Space below the button */
+    position: relative; /* Needed for absolute positioning of dropdown */
+    display: inline-block; /* Fit container to content */
+}
+
+.dropdown-container {
+    position: relative; /* Context for dropdown content */
+}
+
+.search-coupon-btn {
+    background-color: #FFAAAA; /* Pink background like title highlight */
+    color: #000000;
+    border: 1px solid #dd9999; /* Slightly darker border */
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Inria Sans', sans-serif; /* Match other buttons/titles */
+    font-size: 16px;
+    display: inline-flex; /* Align text and arrow */
+    align-items: center;
+    gap: 5px; /* Space between text and arrow */
+}
+
+/* Removed specific font-size for arrow, let it inherit */
+/* .search-coupon-btn .dropdown-arrow {
+    font-size: 12px;
+} */
+
+.search-coupon-btn:hover {
+    background-color: #ff9999; /* Darker pink on hover */
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none; /* Hide by default */
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1; /* Ensure it appears above other content */
+  border-radius: 4px;
+  top: 100%; /* Position below the button */
+  left: 0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Inria Sans', sans-serif;
+  font-size: 14px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover (can be changed to click with JS) */
+.dropdown-container:hover .dropdown-content {
+  display: block;
+}
+
+
+/* Coupon Filters/Search Section */
+.coupon-filters { /* Based on Groups 1:39, 1:42, 1:45, 1:36 */
+    display: flex;
+    align-items: flex-end; /* Align items to bottom for button alignment */
+    gap: 20px; /* Space between filter groups */
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for filter area */
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    font-family: 'Itim', cursive; /* Figma style_HI7LVF */
+    font-size: 16px; /* Adjusted from 24px */
+    color: #000000; /* Figma fill_IDIZ6P */
+    margin-bottom: 5px;
+}
+
+.filter-group input[type="text"],
+.filter-group input[type="number"] { /* Added number type for Min/Max */
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Figma borderRadius 1:41 etc. */
+    font-size: 14px;
+    background-color: #D9D9D9; /* Figma fill_JTT0K2 */
+    min-width: 150px; /* Adjust width */
+}
+
+.search-button { /* Figma Group 1:36 */
+    padding: 10px 25px;
+    font-family: 'Inria Sans', sans-serif; /* Figma style_F59K7D */
+    font-size: 16px; /* Adjusted */
+    color: #000000; /* Figma fill_IDIZ6P */
+    background-color: #FEFEFE; /* Figma fill_WHD0P7 */
+    border: 1px solid #D0CDCD; /* Figma stroke_YDT6UF */
+    border-radius: 10px; /* Figma borderRadius */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: auto; /* Push search button to the right */
+}
+
+.search-button:hover {
+    background-color: #e8e8e8;
+}
+
+/* Coupon Table Section */
+.coupon-table-section { /* Based on Figma Rect 1:48 */
+    background-color: #FFFFFF; /* Figma fill_ME163W */
+    border: 1px solid #080808; /* Figma stroke_SEW9RK */
+    border-radius: 5px;
+    overflow: hidden; /* Ensures border radius applies to table */
+    margin-top: 20px; /* Add some space above table */
+}
+
+.coupon-table {
+    width: 100%;
+    border-collapse: collapse; /* Remove space between borders */
+}
+
+.coupon-table th,
+.coupon-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #000000; /* Figma Line 1:49 etc. stroke_P61WNB */
+    font-family: 'Itim', cursive; /* Figma style_HI7LVF */
+    font-size: 16px; /* Adjusted */
+    color: #000000; /* Figma fill_IDIZ6P */
+    vertical-align: middle; /* Align content vertically */
+    background-color: #FFFDFD; /* Figma Rect 1:92 etc. fill_POPCB0 */
+}
+
+/* Add vertical borders */
+.coupon-table th,
+.coupon-table td {
+    border-right: 1px solid #000000; /* Figma Line 1:55 etc. stroke_P61WNB */
+}
+.coupon-table th:last-child,
+.coupon-table td:last-child {
+    border-right: none; /* Remove border from last column */
+}
+
+
+.coupon-table thead th {
+    background-color: #f2f2f2; /* Light grey header */
+    font-weight: bold;
+}
+
+/* Remove zebra striping if background is set per cell */
+/* .coupon-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+} */
+
+.coupon-table tbody tr:hover td { /* Hover effect on cells */
+    background-color: #f1f1f1;
+}
+
+/* Action Buttons in Table - Styles from Management_Customer_Account */
+.coupon-table td.operations { /* Target the specific class */
+    text-align: center;
+    background-color: #FFFDFD; /* Ensure operations cell matches row bg */
+}
+
+.operation-btn { /* Use the correct class name */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+.operation-btn img {
+    width: 20px;
+    height: 20px; /* Explicit height */
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain; /* Ensure icons scale nicely */
+}
+
+/* Table Footer */
+.table-footer { /* Based on Figma Text 1:113 */
+    padding: 10px 15px;
+    font-family: 'Itim', cursive; /* Figma style_HI7LVF */
+    font-size: 14px; /* Adjusted */
+    color: #000000; /* Figma fill_IDIZ6P */
+    background-color: #f9f9f9; /* Use a standard footer background */
+    border-top: 1px solid #000000; /* Match table borders */
+    text-align: left;
+}

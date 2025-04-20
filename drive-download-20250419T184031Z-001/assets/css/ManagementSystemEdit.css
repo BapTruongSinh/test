@@ -1,0 +1,504 @@
+/* Management System Styles */
+
+/* Fonts from Figma */
+body {
+    font-family: 'Inria Sans', sans-serif; /* Default font for most text */
+}
+
+.user-name {
+    font-family: 'Imprima', sans-serif;
+}
+
+.form-group label,
+.section-title,
+.choose-pic-btn,
+.submit-btn {
+    font-family: 'Itim', sans-serif;
+}
+
+.page-title {
+    font-family: 'IM Fell English', serif;
+}
+
+
+/* Overall Layout */
+.management-system {
+    display: flex;
+    min-height: 100vh; /* Ensure it takes full viewport height */
+    background-color: #FFFFFF; /* fill_0G9ELD */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 280px; /* Approximate width from Figma Rectangle 69 */
+    background-color: #9194A3; /* fill_EZ539T */
+    border-right: 1px solid #ABA5A5; /* stroke_XNTD1C */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    color: #000000; /* fill_ARFYSP - Default text color */
+}
+
+.user-profile {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative; /* For status indicator positioning */
+}
+
+.avatar-container {
+    position: relative;
+    display: inline-block; /* To wrap avatar and indicator */
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 80px; /* Approximate size from Ellipse 881 */
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block; /* Remove extra space below image */
+    margin: 0 auto; /* Center if needed */
+}
+
+.status-indicator {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 15px; /* Approximate size from Ellipse 880 */
+    height: 15px;
+    background-color: #4CAF50; /* Assuming green for online status, adjust as needed */
+    border-radius: 50%;
+    border: 2px solid #9194A3; /* Match sidebar background */
+}
+
+.user-name {
+    font-size: 32px; /* style_EV0N0Z */
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.user-role {
+    font-size: 24px; /* style_OCBQLB */
+    font-weight: 400;
+    color: #000000; /* fill_ARFYSP */
+}
+
+.main-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-item {
+    margin-bottom: 10px;
+    border: 1px solid #9194A3; /* stroke_E4GS06 */
+    border-radius: 5px; /* Slight rounding */
+    background-color: #9194A3; /* fill_EZ539T */
+}
+
+.nav-item.active {
+    background-color: #FFFFFF; /* fill_0G9ELD for active item */
+    border-color: #258DEE; /* stroke_7JTG3L for active item */
+}
+
+.nav-item a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #000000; /* fill_ARFYSP */
+    font-size: 24px; /* style_OCBQLB */
+    font-weight: 400;
+    border-radius: 5px; /* Match parent */
+}
+
+.nav-item.active a {
+     /* Text color remains black in active state based on Figma */
+}
+
+
+.nav-icon {
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+    margin-right: 15px;
+    object-fit: contain; /* Ensure icon aspect ratio is maintained */
+}
+
+/* Main Content Styles */
+.main-content {
+    flex-grow: 1;
+    padding: 20px 40px; /* Add more padding */
+    background-color: #FFFFFF; /* fill_0G9ELD */
+    border-left: 1px solid #B7B2B2; /* stroke_802SGO */
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #B7B2B2; /* stroke_802SGO */
+}
+
+.page-title {
+    font-size: 24px; /* style_NSFBP6 */
+    font-weight: 400;
+    color: #000000; /* fill_ARFYSP */
+}
+
+.account-section {
+    display: flex;
+    align-items: center;
+}
+
+.account-placeholder {
+    width: 40px; /* Approximate size */
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.account-icon {
+    width: 50px; /* Approximate size */
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Add Product Section Styles */
+.add-product-section {
+    background-color: #FFFFFF; /* fill_0G9ELD */
+    padding: 0; /* Remove padding from section, apply to form if needed */
+    border: 1px solid #C1BDBD; /* stroke_DWYMXN */
+    border-radius: 10px; /* borderRadius_10px */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional shadow */
+    margin-top: 20px; /* Add some space above */
+}
+
+/* Product Action Dropdown Section */
+.product-action-dropdown-section {
+    margin-bottom: 20px; /* Space below the button */
+    position: relative; /* Needed for absolute positioning of dropdown */
+    display: inline-block; /* Fit container to content */
+    border-bottom: 1px solid #A8A8A8; /* Figma 1:911 */
+    padding-bottom: 15px; /* Match old container padding */
+    width: 100%; /* Make the container span width for the border */
+}
+
+.dropdown-container {
+    position: relative; /* Context for dropdown content */
+    display: inline-block; /* Keep button width fit to content */
+}
+
+.product-action-btn { /* Style like old section-header-button */
+    background-color: #FFAAAA; /* fill_T75QUS */
+    color: #000000;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Inria Sans', sans-serif; /* Match section title font */
+    font-size: 24px; /* Match section title font size */
+    display: inline-flex; /* Align text and arrow */
+    align-items: center;
+    gap: 8px; /* Space between text and arrow */
+}
+
+.product-action-btn .dropdown-arrow {
+    font-size: 16px; /* Adjust arrow size */
+}
+
+.product-action-btn:hover {
+    background-color: #ff9999; /* Darker pink on hover */
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none; /* Hide by default */
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px; /* Adjust as needed */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1; /* Ensure it appears above other content */
+  border-radius: 4px;
+  top: 100%; /* Position below the button */
+  left: 0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Inria Sans', sans-serif;
+  font-size: 16px; /* Smaller font for dropdown items */
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown-container:hover .dropdown-content {
+  display: block;
+}
+
+/* Add padding to the form itself */
+.add-product-form {
+    padding: 30px;
+    /* Add display: none; by default if toggling */
+    /* display: none; */
+}
+
+/* Form Styles */
+.add-product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between rows */
+}
+
+.form-row {
+    display: flex;
+    gap: 30px; /* Spacing between groups in a row */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.form-group {
+    flex: 1; /* Make groups share space equally */
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 24px; /* style_K1KW1R */
+    font-weight: 400;
+    color: #000000; /* fill_ARFYSP */
+    margin-bottom: 8px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group textarea,
+.form-group select { /* Apply to select as well */
+    background-color: #D9D9D9; /* fill_QBVIA6 */
+    border: none; /* Remove default border */
+    border-radius: 10px; /* borderRadius_10px */
+    padding: 10px 15px;
+    font-size: 18px; /* Adjust as needed */
+    width: 100%; /* Make inputs fill the group */
+    appearance: none; /* Remove default system appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Add custom arrow for select */
+.form-group select.status-select {
+    background-image: url('../../images/arrow-down-black.svg'); /* Use the arrow image */
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px; /* Adjust size */
+    padding-right: 40px; /* Make space for the arrow */
+}
+
+.form-group textarea {
+    min-height: 80px; /* Adjust height */
+    resize: vertical; /* Allow vertical resize */
+}
+
+/* Specific Group Adjustments (Remove old status styles) */
+/* .status-group .status-select-wrapper {
+    position: relative;
+} */
+
+/* .status-group .status-arrow {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px; /* Adjust size */
+    /* height: auto;
+    pointer-events: none; /* Prevent interaction with arrow */
+    */
+/* } */ /* Removed stray brace */
+
+/* Reset flex-grow for equal spacing */
+.describe-group,
+.detail-picture-group {
+    flex: 1; /* Reset to default flex: 1 for equal spacing */
+}
+
+.picture-row { /* This class seems unused now, can be removed or ignored */
+    /* align-items: flex-start; */
+}
+
+/* Ensure form groups align items at the start by default */
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; /* Default alignment */
+}
+
+
+.picture-upload-area {
+    border: 1px dashed #BAB7B7; /* stroke_S2MFBS - dashed style */
+    border-radius: 10px; /* borderRadius_10px */
+    padding: 20px;
+    min-height: 100px; /* Minimum height */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    /* justify-content: center; Removed vertical centering */
+    background-color: #FFFFFF; /* fill_0G9ELD */
+}
+
+.choose-pic-btn {
+    display: inline-block; /* Make button only as wide as content */
+    width: auto; /* Override any potential width setting */
+    font-size: 20px; /* Slightly smaller font */
+    font-weight: 400;
+    color: #000000; /* fill_ARFYSP */
+    background-color: #D9D9D9; /* Give it a background like other inputs */
+    border: none;
+    border-radius: 5px; /* Add some rounding */
+    cursor: pointer;
+    padding: 8px 20px; /* Adjust padding */
+    margin-bottom: 0; /* Remove margin if not needed */
+    margin-top: 10px; /* Add some space above the button inside the area */
+}
+
+/* Add styles for displaying uploaded images if needed */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end; /* Align button to the right */
+    margin-top: 20px;
+}
+
+.submit-btn {
+    background-color: #FFFFFF; /* fill_0G9ELD */
+    border: 1px solid #BAB7B7; /* stroke_S2MFBS */
+    border-radius: 10px; /* borderRadius_10px */
+    padding: 12px 30px;
+    font-size: 24px; /* style_K1KW1R */
+    font-weight: 400;
+    color: #000000; /* fill_ARFYSP */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #f0f0f0; /* Slight hover effect */
+}
+
+.modal-content{
+    border-radius: 20px;
+}
+
+.change-picture-modal {
+    /* Assuming the main frame 1:2022 represents the modal */
+    position: relative; /* For positioning the close button */
+    background-color: #FFFFFF; /* fill_IR6I1I */
+    /* border: 1px solid #9F9797; */
+    border-radius: 20px; /* borderRadius_20px */
+    padding: 30px 40px; /* Approximate padding */
+    width: 600px;
+    max-width: 700px; /* Max width */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.modal-my-content .choose-label, .upload-label {
+    font-size: 24px; /* style_96L8AQ */
+    color: #000000; /* fill_3SZX21 */
+    margin-bottom: 15px;
+}
+
+.modal-my-content .picture-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Responsive grid */
+    gap: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee; /* Separator */
+    padding-bottom: 30px;
+}
+
+.modal-my-content .picture-option {
+    background-color: #D9D9D9; /* fill_D1M0YZ */
+    height: 80px; /* Approximate height */
+    border-radius: 5px; /* Slight rounding */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-my-content .picture-option:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Add style for selected option if needed */
+.modal-my-content .picture-option.selected {
+    border: 2px solid #258DEE; /* Example selection indicator */
+}
+
+
+.modal-my-content .upload-area {
+    border: 1px dashed #BAB7B7; /* stroke_MHQ0BS */
+    border-radius: 10px; /* borderRadius_10px */
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.modal-my-content .upload-placeholder {
+    margin-bottom: 15px;
+}
+
+.modal-my-content .upload-placeholder img {
+    width: 100px; /* Adjust size */
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.modal-my-content .upload-btn {
+    font-size: 20px; /* style_96L8AQ (slightly smaller for button) */
+    color: #000000; /* fill_3SZX21 */
+    background-color: #D9D9D9; /* Match option background */
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-my-content .submit-container {
+    text-align: center; /* Center the submit button */
+    margin-top: 20px;
+}
+
+.modal-my-content .submit-btn {
+    display: inline-block; /* Make button fit content */
+    font-size: 24px; /* style_96L8AQ */
+    color: #000000; /* fill_3SZX21 */
+    background-color: #FFFFFF; /* fill_IR6I1I */
+    border: 1px solid #BAB7B7; /* stroke_MHQ0BS */
+    border-radius: 10px; /* borderRadius_10px */
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+.modal-my-content .submit-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.modal-my-content .close-btn {
+    position: absolute;
+    top: 15px; /* Adjust position */
+    right: 15px; /* Adjust position */
+    background: none;
+    border: none;
+    font-size: 28px; /* Make it larger */
+    line-height: 1;
+    color: #888;
+    cursor: pointer;
+}

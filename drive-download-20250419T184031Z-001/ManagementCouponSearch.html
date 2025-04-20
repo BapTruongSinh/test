@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Coupon Search</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/ManagementCouponSearch.css">
+    <!-- Add Font Awesome if needed later -->
+</head>
+<body>
+    <div class="management-system">
+        <!-- Sidebar (Copied from Management_Customer_Account, paths adjusted) -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="avatar-container">
+                    <!-- Using image from top-level images/ folder -->
+                    <img src="assets/images/455123067_1470091394391641_5075587184145921216_n.jpg" alt="User Avatar" class="avatar"> <!-- Figma 1:6 -->
+                    <span class="status-indicator"></span> <!-- Figma 1:5 -->
+                </div>
+                <h2 class="user-name">Trung Trung</h2> <!-- Figma 1:7 -->
+                <p class="user-role">Manager</p> <!-- Figma 1:8 -->
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <!-- Navigation items based on Figma Groups 1:9 to 1:29 -->
+                    <li class="nav-item"> <!-- Figma Group 1:9 -->
+                        <a href="ManagementSystemAdd.html">
+                            <img src="assets/images/manage-system-icon.png" alt="" class="nav-icon"> <!-- Figma 1:12 -->
+                            <span>Manage System</span> <!-- Figma 1:11 -->
+                        </a>
+                    </li>
+                    <li class="nav-item"> <!-- Figma Group 1:13 -->
+                         <a href="ManagementCustomerAccount.html">
+                            <img src="assets/images/manage-customer-icon.png" alt="" class="nav-icon"> <!-- Figma 1:16 -->
+                            <span>Manage Customer</span> <!-- Figma 1:15 -->
+                        </a>
+                    </li>
+                    <li class="nav-item"> <!-- Figma Group 1:17 -->
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-order-icon.png" alt="" class="nav-icon"> <!-- Figma 1:20 -->
+                            <span>Manage Order</span> <!-- Figma 1:19 -->
+                        </a>
+                    </li>
+                    <li class="nav-item active"> <!-- Figma Group 1:21 - Set Manage Coupon as active -->
+                        <a href="#">
+                            <img src="assets/images/manage-coupon-icon.png" alt="" class="nav-icon"> <!-- Figma 1:24 -->
+                            <span>Manage Coupon</span> <!-- Figma 1:23 -->
+                        </a>
+                    </li>
+                    <li class="nav-item"> <!-- Figma Group 1:25 -->
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-rank-icon.png" alt="" class="nav-icon"> <!-- Figma 1:28 -->
+                            <span>Management Rank</span> <!-- Figma 1:27 -->
+                        </a>
+                    </li>
+                    <li class="nav-item"> <!-- Figma Group 1:29 -->
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-statistics-icon.png" alt="" class="nav-icon"> <!-- Figma 1:32 -->
+                            <span>Manage Statictis</span> <!-- Figma 1:31 -->
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar (Reused structure) -->
+            <header class="top-bar">
+                <h1 class="page-title">Management</h1> <!-- Text from Figma 1:114 -->
+                <div class="account-section">
+                     <a href="ProfileAdminEdit.html" title="Edit Profile">
+                        <img src="assets/images/account-icon-large.png" alt="Edit Profile" class="account-icon"> <!-- Link to Admin Edit Profile -->
+                    </a>
+                    <a href="index.html" title="Go to Home">
+                        <img src="assets/images/360_F_66468754_86IFi1dhqwtHdXzPeMQNhGtGp8Z2D3yC.jpg" alt="Go to Home" class="account-placeholder"> <!-- Link to Home -->
+                    </a>
+                </div>
+            </header>
+
+            <!-- Search/Add Coupon Dropdown -->
+            <div class="search-toggle-section">
+                 <div class="dropdown-container">
+                    <button class="search-coupon-btn">
+                        Search Coupon <span class="dropdown-arrow">▼</span> <!-- Changed button text -->
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="ManagementAddCoupon.html">Add Coupon</a> <!-- Changed link text and href -->
+                    </div>
+                 </div>
+            </div>
+
+            <!-- Coupon Filters/Search Section -->
+            <section class="coupon-filters">
+                <!-- Group 110: ID Coupon -->
+                <div class="filter-group"> <!-- Mapped to Figma Group 1:42 -->
+                    <label for="coupon-id">ID Coupon:</label> <!-- Text 1:43 -->
+                    <input type="text" id="coupon-id" name="coupon-id" placeholder=""> <!-- Rect 1:44 -->
+                </div>
+                <!-- Group 107: Min -->
+                <div class="filter-group"> <!-- Mapped to Figma Group 1:39 -->
+                    <label for="coupon-min">Min:</label> <!-- Text 1:40 -->
+                    <input type="number" id="coupon-min" name="coupon-min" placeholder=""> <!-- Rect 1:41 -->
+                </div>
+                <!-- Group 108: Max -->
+                <div class="filter-group"> <!-- Mapped to Figma Group 1:45 -->
+                    <label for="coupon-max">Max:</label> <!-- Text 1:46 -->
+                    <input type="number" id="coupon-max" name="coupon-max" placeholder=""> <!-- Rect 1:47 -->
+                </div>
+                <!-- Group 117: Search Button -->
+                <button class="search-button">Search</button> <!-- Mapped to Figma Group 1:36, Text 1:38 -->
+            </section>
+
+            <!-- Coupon Table Section -->
+            <section class="coupon-table-section"> <!-- Mapped to Figma Rect 1:48 -->
+                <table class="coupon-table">
+                    <thead>
+                        <tr>
+                            <th>ID Coupon</th> <!-- Text 1:61 -->
+                            <th>Name Coupon</th> <!-- Text 1:67 -->
+                            <th>Discount</th> <!-- Text 1:73 -->
+                            <th>Date Start</th> <!-- Text 1:79 -->
+                            <th>Date Begin</th> <!-- Text 1:85 -->
+                            <th>Operation</th> <!-- Text 1:91 -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example Row 1 (Repeat structure for 1:62-1:100) -->
+                        <tr>
+                            <td>CP001</td> <!-- Text 1:62 -->
+                            <td>Summer Sale</td> <!-- Text 1:68 -->
+                            <td>15%</td> <!-- Text 1:74 -->
+                            <td>2024-06-01</td> <!-- Text 1:80 -->
+                            <td>2024-07-01</td> <!-- Text 1:86 -->
+                            <td class="operations"> <!-- Mapped to Group 1:98 -->
+                                <button class="operation-btn edit-btn" title="Edit">
+                                    <img src="assets/images/edit-icon.png" alt="Edit"> <!-- Rect 1:99 (imageRef f1a1...) -->
+                                </button>
+                                <button class="operation-btn delete-btn" title="Delete">
+                                     <img src="assets/images/542724.png" alt="Delete"> <!-- Rect 1:100 (imageRef ccdf...) -->
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Example Row 2 (Repeat structure for 1:63-1:103) -->
+                         <tr>
+                            <td>CP002</td> <!-- Text 1:63 -->
+                            <td>Weekend Deal</td> <!-- Text 1:69 -->
+                            <td>$10 Off</td> <!-- Text 1:75 -->
+                            <td>2024-06-15</td> <!-- Text 1:81 -->
+                            <td>2024-06-17</td> <!-- Text 1:87 -->
+                            <td class="operations"> <!-- Mapped to Group 1:101 -->
+                                <button class="operation-btn edit-btn" title="Edit">
+                                    <img src="assets/images/edit-icon.png" alt="Edit"> <!-- Rect 1:102 -->
+                                </button>
+                                <button class="operation-btn delete-btn" title="Delete">
+                                     <img src="assets/images/542724.png" alt="Delete"> <!-- Rect 1:103 -->
+                                </button>
+                            </td>
+                        </tr>
+                         <!-- Example Row 3 (Repeat structure for 1:64-1:106) -->
+                         <tr>
+                            <td>CP003</td> <!-- Text 1:64 -->
+                            <td>New User Discount</td> <!-- Text 1:70 -->
+                            <td>20%</td> <!-- Text 1:76 -->
+                            <td>2024-01-01</td> <!-- Text 1:82 -->
+                            <td>2024-12-31</td> <!-- Text 1:88 -->
+                            <td class="operations"> <!-- Mapped to Group 1:104 -->
+                                <button class="operation-btn edit-btn" title="Edit">
+                                    <img src="assets/images/edit-icon.png" alt="Edit"> <!-- Rect 1:105 -->
+                                </button>
+                                <button class="operation-btn delete-btn" title="Delete">
+                                     <img src="assets/images/542724.png" alt="Delete"> <!-- Rect 1:106 -->
+                                </button>
+                            </td>
+                        </tr>
+                         <!-- Example Row 4 (Repeat structure for 1:65-1:109) -->
+                         <tr>
+                            <td>CP004</td> <!-- Text 1:65 -->
+                            <td>Flash Sale</td> <!-- Text 1:71 -->
+                            <td>50% (Max $20)</td> <!-- Text 1:77 -->
+                            <td>2024-06-20</td> <!-- Text 1:83 -->
+                            <td>2024-06-20</td> <!-- Text 1:89 -->
+                            <td class="operations"> <!-- Mapped to Group 1:107 -->
+                                <button class="operation-btn edit-btn" title="Edit">
+                                    <img src="assets/images/edit-icon.png" alt="Edit"> <!-- Rect 1:108 -->
+                                </button>
+                                <button class="operation-btn delete-btn" title="Delete">
+                                     <img src="assets/images/542724.png" alt="Delete"> <!-- Rect 1:109 -->
+                                </button>
+                            </td>
+                        </tr>
+                         <!-- Example Row 5 (Repeat structure for 1:66-1:112) -->
+                         <tr>
+                            <td>CP005</td> <!-- Text 1:66 -->
+                            <td>Loyalty Reward</td> <!-- Text 1:72 -->
+                            <td>Free Shipping</td> <!-- Text 1:78 -->
+                            <td>2024-05-01</td> <!-- Text 1:84 -->
+                            <td>2024-08-01</td> <!-- Text 1:90 -->
+                            <td class="operations"> <!-- Mapped to Group 1:110 -->
+                                <button class="operation-btn edit-btn" title="Edit">
+                                    <img src="assets/images/edit-icon.png" alt="Edit"> <!-- Rect 1:111 -->
+                                </button>
+                                <button class="operation-btn delete-btn" title="Delete">
+                                     <img src="assets/images/542724.png" alt="Delete"> <!-- Rect 1:112 -->
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+                <div class="table-footer">
+                    <span>Show 7 coupon:</span> <!-- Text from 1:113 -->
+                    <!-- Add pagination controls if necessary -->
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Add JS file if needed -->
+    <!-- <script src="assets/js/main.js"></script> -->
+</body>
+</html>

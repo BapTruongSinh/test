@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Header */
+.header .inner-wrap{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+}
+
+.header .inner-wrap a{
+    color: #111;
+}
+
+.header .inner-wrap ul{
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.header .inner-wrap .inner-menu ul li{
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: "Roboto", sans-serif;
+}
+
+.header .inner-wrap .inner-logo{
+    font-family: "Inknut Antiqua", serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.header .inner-wrap .inner-search input{
+    background: #D9D9D9;
+    border: none;
+    text-align: right;
+    width: 367px;
+    height: 35px;
+    margin-top: 8px;
+    padding-right: 20px;
+}
+
+.header .inner-wrap .inner-utilities{
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+.header .inner-wrap .inner-utilities li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header .inner-wrap .inner-utilities ul{
+    margin-right: 20px;
+    margin-top: 25px;
+    padding: 0;
+}
+
+.header .inner-wrap .inner-utilities img{
+    height: 40px;
+    width: auto;
+}
+
+.header .inner-wrap .inner-menu-logo{
+    font-size: 25px;
+}
+
+/* End Header */
+
+/* Line */
+.line{
+    margin: 20px 0;
+    background: #111;
+    height: 1px;
+}
+/* End Line */
+
+/* Section-one */
+.section-one .inner-wrap{
+    padding-top: 100px;
+}
+
+.section-one .inner-wrap .inner-content{
+    font-family: "Inknut Antiqua", serif;
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+.section-one .inner-home{
+    position: relative;
+}
+
+.section-one .inner-home img{
+    height: 525px;
+}
+
+.section-one .inner-home .inner-sale{
+    position: absolute;
+    top: 130px;
+    right: 150px;
+}
+
+.section-one .inner-home .inner-sale .span1{
+    font-family: "Cardo", serif;
+    font-size: 38px;
+}
+
+.section-one .inner-home .inner-sale .span2{
+    font-family: "Cambo", serif;
+    font-size: 16px;
+}
+/* End Section-one */
+
+/* Section-two */
+.section-two .inner-wrap .inner-content{
+    display: flex;
+}
+
+.section-two .inner-wrap .inner-content .content-left{
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.section-two .inner-wrap .inner-content .content-right{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.section-two .inner-wrap .inner-content .content-right a{
+    color: #5E5E5E;
+    font-size: 20px;
+}
+
+.section-two{
+    overflow: hidden;
+}
+
+.section-two .inner-wrap .line{
+    margin: 20px 0;
+    background: #DFDFDF;
+    height: 1px;
+}
+
+.section-two .inner-wrap .inner-list{
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.section-two .inner-wrap .slide{
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.section-two .inner-wrap .inner-list .list .des-one{
+    margin: 5px 0;
+    display: flex;
+    font-size: 16px;
+}
+
+.section-two .inner-wrap .inner-list .list .des-two{
+    margin: 5px 0;
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.section-two .inner-wrap .inner-list .list .right{
+    margin-left: auto;
+}
+
+.section-two .inner-wrap .inner-button{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.section-two .inner-wrap .inner-button button{
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+    background: #fff;
+    border: 1px solid #111;
+}
+
+.section-two .inner-wrap .inner-button button:hover:not(.disabled){
+    background: #DFDFDF;
+}
+
+.section-two .inner-wrap .inner-button .disabled {
+    color: #DFDFDF;
+    border: 1px solid #B9B9B9;
+}
+/* End Section-two */
+
+/* Footer */
+.footer .container .inner-wrap .inner-box .inner-content{
+    font-size: 24px;
+    font-weight: 800;
+    color: #B30C0C;
+    margin: 10px 0;
+}
+
+
+.footer .container .inner-wrap .inner-box .inner-text{
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.footer .container .inner-wrap .inner-box .inner-utilities{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.footer .container .inner-wrap .inner-box img{
+    margin: 0 5px;
+    margin-left: 0;
+}
+
+.footer .container .inner-wrap{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    justify-items: left;
+}
+
+.footer .container .inner-wrap li{
+    font-weight: 450;
+}
+
+/* End Footer */
+
+/* Management System Layout (Basic Structure) */
+.management-system {
+    display: flex;
+    min-height: 100vh; /* Ensure it takes full height */
+}
+
+.sidebar {
+    width: 250px; /* Adjust width as needed */
+    background-color: #9194A3; /* Color from Figma Rect 7:8 */
+    padding: 20px;
+    color: #000; /* Default text color */
+    display: flex;
+    flex-direction: column;
+}
+
+.user-profile {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000; /* Text color from Figma 7:11, 7:12 */
+}
+
+.avatar-container {
+    position: relative;
+    width: 100px; /* Adjust size */
+    height: 100px;
+    margin: 0 auto 10px;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Make it circular like Figma 7:10 */
+    border: 1px solid #ABA5A5; /* Border from Figma 7:8 */
+    object-fit: cover;
+}
+
+.status-indicator {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 15px; /* Size like Figma 7:9 */
+    height: 15px;
+    background-color: #4CAF50; /* Example online status color */
+    border-radius: 50%;
+    border: 2px solid #9194A3; /* Match sidebar background */
+}
+
+.user-name {
+    font-family: 'Imprima', sans-serif; /* Font from Figma style_WHM0BL */
+    font-size: 20px; /* Adjusted size */
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.user-role {
+    font-family: 'Inria Sans', sans-serif; /* Font from Figma style_KVPAA3 */
+    font-size: 16px; /* Adjusted size */
+    font-weight: 400;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav .nav-item {
+    margin-bottom: 10px;
+}
+
+.main-nav .nav-item a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #000; /* Text color from Figma 7:15 etc. */
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Inria Sans', sans-serif; /* Font from Figma style_KVPAA3 */
+    font-size: 18px; /* Adjusted size */
+    border: 1px solid #9194A3; /* Border like Figma 7:14 */
+}
+
+.main-nav .nav-item .nav-icon {
+    width: 24px; /* Adjust icon size */
+    height: 24px;
+    margin-right: 15px;
+    object-fit: contain; /* Ensure icon fits */
+}
+
+.main-nav .nav-item a:hover {
+    background-color: #A8AAB3; /* Slightly lighter hover */
+}
+
+.main-nav .nav-item.active a {
+    background-color: #FFFFFF; /* Active background from Figma 7:30 */
+    border: 1px solid #258DEE; /* Active border from Figma 7:30 */
+    font-weight: bold; /* Make active text bolder */
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #FFFFFF; /* Background from Figma 7:2 */
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #B7B2B2; /* Border from Figma 7:3 */
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.page-title {
+    font-family: 'IM FELL English', serif; /* Font from Figma style_7L3NOV */
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.account-section {
+    display: flex;
+    align-items: center;
+}
+
+.account-section img {
+    width: 40px; /* Adjust icon size */
+    height: 40px;
+    border-radius: 50%; /* Make circular like Figma 7:4, 7:5 */
+    margin-left: 15px;
+    object-fit: cover;
+}
+
+/* Dropdown Styles (Common for Coupon/Rank Actions) */
+.rank-action-dropdown-section, /* Specific for Rank */
+.add-coupon-dropdown-section /* From Coupon page for reference */ {
+    margin-bottom: 25px; /* Space below dropdown */
+    /* text-align: center; Reverted centering */
+}
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.rank-action-btn, /* Specific for Rank */
+.add-coupon-btn /* From Coupon page */ {
+    background-color: #FFAAAA; /* Color from Figma 7:6 */
+    color: #000; /* Text color from Figma 7:7 */
+    padding: 10px 20px;
+    font-size: 20px; /* Adjusted from Figma 7:7 */
+    font-family: 'Inria Sans', sans-serif; /* Font from Figma 7:7 */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Add some rounding */
+    display: flex;
+    align-items: center;
+}
+
+.rank-action-btn:hover,
+.add-coupon-btn:hover {
+    background-color: #FFC0C0; /* Lighter hover */
+}
+
+.dropdown-arrow {
+    margin-left: 10px;
+    font-size: 12px; /* Smaller arrow */
+}
+
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: #f9f9f9;
+    /* min-width: 160px; Remove min-width */
+    width: 100%; /* Make dropdown match button width */
+    box-sizing: border-box; /* Include padding/border in width */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; /* Ensure it's above other content */
+    border-radius: 5px;
+    left: 0; /* Align with left edge of button */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 16px;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show dropdown on hover */
+.dropdown-container:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Add Rank Section Styles */
+.add-rank-section {
+    background-color: #fff; /* Match main content */
+    padding: 20px;
+    border-radius: 8px; /* Optional: add some rounding */
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); Optional: add shadow */
+}
+
+.section-title {
+    font-family: 'Inria Sans', sans-serif; /* Font from Figma 7:7 */
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    color: #000; /* Color from Figma 7:7 */
+    text-align: center; /* Center the title */
+}
+
+.add-rank-form {
+    margin-bottom: 40px; /* Space between form and rank info */
+    /* Reverted width/centering changes */
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between; /* Space out fields in a row */
+    margin-bottom: 20px;
+    gap: 20px; /* Add gap between form groups */
+}
+
+.form-group {
+    flex: 1; /* Allow groups to grow equally */
+    display: flex;
+    flex-direction: column; /* Stack label and input */
+}
+
+.form-group label {
+    font-family: 'Itim', cursive; /* Font from Figma style_50UB43 */
+    font-size: 20px; /* Adjusted size */
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #000; /* Color from Figma */
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+    padding: 10px;
+    border: none; /* Remove default border */
+    background-color: #D9D9D9; /* Background from Figma 7:44 etc. */
+    border-radius: 10px; /* Radius from Figma 7:44 etc. */
+    font-family: 'Itim', cursive; /* Match label font */
+    font-size: 16px;
+    /* Reverted width/box-sizing changes */
+}
+
+.form-actions {
+    text-align: center; /* Center the submit button */
+    margin-top: 30px;
+}
+
+.submit-button {
+    padding: 12px 30px;
+    font-family: 'Itim', cursive; /* Font from Figma 7:53 */
+    font-size: 20px; /* Adjusted size */
+    color: #000; /* Text color from Figma 7:53 */
+    background-color: #fff; /* Background from Figma 7:52 */
+    border: 1px solid #BAB7B7; /* Border from Figma 7:52 */
+    border-radius: 10px; /* Radius from Figma 7:52 */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #f0f0f0; /* Simple hover effect */
+}
+
+/* Rank Info Section Styles */
+.rank-info-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc; /* Separator */
+}
+
+.rank-info-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 22px;
+}
+
+.rank-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.rank-card {
+    background-color: #fff; /* Background from Figma 7:63 etc. */
+    border: 1px solid #8D8D8D; /* Border from Figma 7:63 etc. */
+    border-radius: 10px; /* Radius from Figma 7:63 etc. */
+    padding: 15px;
+    font-family: 'Itim', cursive; /* Font from Figma style_UGIGNQ, style_50UB43 */
+    font-size: 16px; /* Base size from Figma style_UGIGNQ */
+    color: #000; /* Text color from Figma */
+}
+
+.rank-card h4 {
+    font-size: 18px; /* Slightly larger for rank name */
+    font-weight: bold; /* Make rank name bold */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.rank-card hr {
+    border: none;
+    border-top: 1px solid #9A9797; /* Line color from Figma 7:77 etc. */
+    margin: 10px 0;
+}
+
+.rank-card p {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.rank-card p:last-child {
+    margin-bottom: 0;
+}

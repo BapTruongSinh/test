@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Address - Profile</title>
+    <!-- Link to CSS files within this directory -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/Profile.css">
+</head>
+<body>
+    <div class="profile-customer-page3">
+        <!-- Sidebar copied, paths adjusted, active state maintained -->
+        <aside class="sidebar3">
+            <div class="user-profile3">
+                <div class="avatar-container3">
+                    <img src="assets/images/455123067_1470091394391641_5075587184145921216_n.jpg" alt="User Avatar" class="avatar3">
+                    <span class="status-indicator3"></span>
+                </div>
+                <h2 class="user-name3">Trung Trung</h2>
+                <p class="user-role3">Customer</p>
+            </div>
+            <nav class="profile-nav3">
+                <ul>
+                    <!-- Item 1: Edit Profile -->
+                    <li class="profile-nav-item3">
+                        <a href="ProfileEditCustomer.html">
+                            <img src="assets/images/edit-246.png" alt="" class="profile-nav-icon3">
+                            <span>Edit Profile</span>
+                        </a>
+                    </li>
+                    <!-- Item 2: Change Password -->
+                    <li class="profile-nav-item3">
+                        <a href="ProfileCustomerPassword.html">
+                            <img src="assets/images/chiakia.png" alt="" class="profile-nav-icon3">
+                            <span>Change Password</span>
+                        </a>
+                    </li>
+                    <!-- Item 3: Address (Active) -->
+                    <li class="profile-nav-item3 active">
+                        <a href="assets/Profile_Customer_Address/index.html">
+                            <img src="assets/images/vitri.png" alt="" class="profile-nav-icon3">
+                            <span>Address</span>
+                        </a>
+                    </li>
+                    <!-- Item 4: Coupon -->
+                    <li class="profile-nav-item3">
+                        <a href="#">
+                            <img src="assets/images/gift-coupon-icon-20763.png" alt="" class="profile-nav-icon3">
+                            <span>Coupon</span>
+                        </a>
+                    </li>
+                    <!-- Item 5: Rank -->
+                    <li class="profile-nav-item3">
+                        <a href="#">
+                            <img src="assets/images/manage-rank-icon.png" alt="" class="profile-nav-icon3">
+                            <span>Rank</span>
+                            <span class="rank-value3">: Gold</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content3">
+            <!-- Header section (Similar to previous profile pages) -->
+            <header class="top-bar3">
+                <h1 class="page-title3">Profile</h1>
+                <div class="account-section3">
+                    <img src="assets/images/account-icon-large.png" alt="Account" class="account-icon3">
+                    <img src="assets/images/360_F_66468754_86IFi1dhqwtHdXzPeMQNhGtGp8Z2D3yC.jpg" alt="Account Placeholder" class="account-placeholder3">
+                </div>
+            </header>
+
+            <!-- Add Address Content Area -->
+            <div class="profile-content-wrapper3">
+                <section class="add-address-section3">
+                    <h2>Add New Address</h2>
+                    <form action="#" method="post" class="add-address-form3">
+                        <div class="form-row3">
+                            <div class="form-group3">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter full name">
+                            </div>
+                            <div class="form-group3">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="Enter phone number">
+                            </div>
+                        </div>
+                        <div class="form-group3">
+                            <label for="province">Province/City</label>
+                            <select id="province" name="province" required>
+                                <option value="" disabled selected>Select Province/City</option>
+                                <option value="danang">Đà Nẵng</option>
+                                <option value="hanoi">Hà Nội</option>
+                                <option value="hcm">Hồ Chí Minh</option>
+                            </select>
+                        </div>
+                        <div class="form-group3">
+                            <label for="district">District</label>
+                            <select id="district" name="district" required>
+                                <option value="" disabled selected>Select District</option>
+                                <option value="lienchieu">Liên Chiểu</option>
+                                <option value="haichau">Hải Châu</option>
+                            </select>
+                        </div>
+                        <div class="form-group3">
+                            <label for="ward">Ward</label>
+                            <select id="ward" name="ward" required>
+                                <option value="" disabled selected>Select Ward</option>
+                                <option value="hoakhanhnam">Hòa Khánh Nam</option>
+                                <option value="hoakhanhbac">Hòa Khánh Bắc</option>
+                            </select>
+                        </div>
+                        <div class="form-group3">
+                            <label for="street-address">Street Name, Building, House No.</label>
+                            <input type="text" id="street-address" name="street-address" required placeholder="Enter street address details">
+                        </div>
+
+                        <div class="form-group3 checkbox-group3">
+                            <input type="checkbox" id="set-default" name="set-default" value="true">
+                            <label for="set-default">Set as Default Address</label>
+                        </div>
+
+                        <div class="form-actions3">
+                            <button type="submit" class="submit-btn3">Save Address</button>
+                            <a href="ProfileCustomerAddress.html" class="cancel-btn3">Cancel</a>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add JS file if needed for dynamic dropdowns -->
+    <!-- <script src="assets/js/address.js"></script> -->
+</body>
+</html>

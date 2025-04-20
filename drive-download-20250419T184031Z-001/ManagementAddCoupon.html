@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Coupon</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/ManagementAddCoupon.css">
+    <!-- Add Font Awesome if needed later -->
+</head>
+<body>
+    <div class="management-system">
+        <!-- Sidebar (Copied from Management_Customer_Account, paths adjusted) -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="avatar-container">
+                    <img src="assets/images/455123067_1470091394391641_5075587184145921216_n.jpg" alt="User Avatar" class="avatar"> <!-- Figma 4:33 -->
+                    <span class="status-indicator"></span> <!-- Figma 4:32 -->
+                </div>
+                <h2 class="user-name">Trung Trung</h2> <!-- Figma 4:34 -->
+                <p class="user-role">Manager</p> <!-- Figma 4:35 -->
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <!-- Navigation items based on Figma Groups 4:36 to 4:56 -->
+                    <li class="nav-item"> <!-- Figma Group 4:36 -->
+                        <a href="ManagementSystemAdd.html">
+                            <img src="assets/images/manage-system-icon.png" alt="" class="nav-icon"> <!-- Figma 4:39 -->
+                            <span>Manage System</span> <!-- Figma 4:38 -->
+                        </a>
+                    </li>
+                    <li class="nav-item"> <!-- Figma Group 4:40 -->
+                         <a href="ManagementCustomerAccount.html">
+                            <img src="assets/images/manage-customer-icon.png" alt="" class="nav-icon"> <!-- Figma 4:43 -->
+                            <span>Manage Customer</span> <!-- Figma 4:42 -->
+                        </a>
+                    </li>
+                    <li class="nav-item"> <!-- Figma Group 4:44 -->
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-order-icon.png" alt="" class="nav-icon"> <!-- Figma 4:47 -->
+                            <span>Manage Order</span> <!-- Figma 4:46 -->
+                        </a>
+                    </li>
+                    <li class="nav-item active"> <!-- Figma Group 4:48 - Set Manage Coupon as active -->
+                        <a href="ManagementCouponSearch.html"> <!-- Link back to coupon search -->
+                            <img src="assets/images/manage-coupon-icon.png" alt="" class="nav-icon"> <!-- Figma 4:51 -->
+                            <span>Manage Coupon</span> <!-- Figma 4:50 -->
+                        </a>
+                    </li>
+                    <li class="nav-item"> <!-- Figma Group 4:52 -->
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-rank-icon.png" alt="" class="nav-icon"> <!-- Figma 4:55 -->
+                            <span>Management Rank</span> <!-- Figma 4:54 -->
+                        </a>
+                    </li>
+                    <li class="nav-item"> <!-- Figma Group 4:56 -->
+                        <a href="#"> <!-- Placeholder link -->
+                            <img src="assets/images/manage-statistics-icon.png" alt="" class="nav-icon"> <!-- Figma 4:59 -->
+                            <span>Manage Statictis</span> <!-- Figma 4:58 -->
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar (Reused structure) -->
+            <header class="top-bar">
+                <h1 class="page-title">Management</h1> <!-- Assuming reuse -->
+                <div class="account-section">
+                     <a href="ProfileAdminEdit.html" title="Edit Profile">
+                        <img src="assets/images/account-icon-large.png" alt="Edit Profile" class="account-icon"> <!-- Link to Admin Edit Profile -->
+                    </a>
+                    <a href="index.html" title="Go to Home">
+                        <img src="assets/images/360_F_66468754_86IFi1dhqwtHdXzPeMQNhGtGp8Z2D3yC.jpg" alt="Go to Home" class="account-placeholder"> <!-- Link to Home -->
+                    </a>
+                </div>
+            </header>
+
+            <!-- Add/Search Coupon Dropdown -->
+             <div class="add-coupon-dropdown-section">
+                 <div class="dropdown-container">
+                    <button class="add-coupon-btn">
+                        Add Coupon <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="ManagementCouponSearch.html">Search Coupon</a> <!-- Link to Search page -->
+                    </div>
+                 </div>
+             </div>
+
+            <!-- Add Coupon Form Section -->
+            <section class="add-coupon-form"> <!-- Mapped to Figma Rect 4:7 -->
+                <!-- Removed H2 title -->
+                <form action="#" method="post"> <!-- Add form element -->
+                    <div class="form-grid">
+                        <!-- Group 107: ID Coupon -->
+                        <div class="form-group"> <!-- Mapped to Figma Group 4:9 -->
+                            <label for="coupon-id">ID Coupon:</label> <!-- Text 4:10 -->
+                            <input type="text" id="coupon-id" name="coupon-id" placeholder="Enter coupon ID"> <!-- Rect 4:11 -->
+                        </div>
+
+                        <!-- Group 108: Name Coupon -->
+                        <div class="form-group"> <!-- Mapped to Figma Group 4:27 -->
+                            <label for="coupon-name">Name Coupon:</label> <!-- Text 4:28 -->
+                            <input type="text" id="coupon-name" name="coupon-name" placeholder="Enter coupon name"> <!-- Rect 4:29 -->
+                        </div>
+
+                        <!-- Group 109: Discount -->
+                        <div class="form-group"> <!-- Mapped to Figma Group 4:12 -->
+                            <label for="coupon-discount">Discount:</label> <!-- Text 4:13 -->
+                            <input type="text" id="coupon-discount" name="coupon-discount" placeholder="e.g., 10% or $5"> <!-- Rect 4:14 -->
+                        </div>
+
+                        <!-- Group 111: Quantity -->
+                        <div class="form-group"> <!-- Mapped to Figma Group 4:24 -->
+                            <label for="coupon-quantity">Quantity:</label> <!-- Text 4:25 -->
+                            <input type="number" id="coupon-quantity" name="coupon-quantity" placeholder="Enter quantity"> <!-- Rect 4:26 -->
+                        </div>
+
+                         <!-- Group 112: Date Start -->
+                         <div class="form-group"> <!-- Mapped to Figma Group 4:15 -->
+                            <label for="coupon-date-start">Date Start:</label> <!-- Text 4:16 -->
+                            <input type="date" id="coupon-date-start" name="coupon-date-start"> <!-- Rect 4:17 -->
+                        </div>
+
+                        <!-- Group 110: Date Begin (Interpreted as Date End) -->
+                        <div class="form-group"> <!-- Mapped to Figma Group 4:21 -->
+                            <label for="coupon-date-end">Date End:</label> <!-- Text 4:22 (Label changed) -->
+                            <input type="date" id="coupon-date-end" name="coupon-date-end"> <!-- Rect 4:23 -->
+                        </div>
+
+                        <!-- Form Actions -->
+                        <div class="form-actions">
+                             <!-- Group 115: Submit Button -->
+                            <button type="submit" class="btn-submit">Submit</button> <!-- Mapped to Figma Group 4:18, Text 4:20 -->
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Add JS file if needed -->
+    <!-- <script src="assets/js/main.js"></script> -->
+</body>
+</html>

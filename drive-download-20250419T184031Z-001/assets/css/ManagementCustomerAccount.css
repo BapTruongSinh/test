@@ -1,0 +1,299 @@
+/* Import additional fonts from Figma */
+@import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
+
+
+/* General Layout */
+body {
+    display: flex; /* Use flexbox for overall layout */
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Default font */
+    background-color: #F6F6F6; /* Match base */
+}
+
+.management-system {
+    display: flex;
+    width: 100%;
+    min-height: 100vh; /* Ensure it takes full viewport height */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 280px; /* Approximate width based on Figma */
+    background-color: #9194A3; /* Correct grey background from Figma 1:13 etc. */
+    border-right: 1px solid #ABA5A5; /* Figma Stroke R5SDNF */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.user-profile {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.avatar-container {
+    position: relative;
+    display: inline-block; /* Center the container */
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 80px; /* Adjust size as needed */
+    height: 80px;
+    border-radius: 50%; /* Circular avatar */
+    border: 2px solid #ddd; /* Optional border */
+    object-fit: cover; /* Ensure image covers the area */
+}
+
+.status-indicator {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: #4CAF50; /* Green status, adjust color */
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+}
+
+.user-name {
+    font-family: 'Imprima', sans-serif; /* Figma style_3QSTX7 */
+    font-size: 24px; /* Adjusted from 32px for better fit */
+    font-weight: 400;
+    color: #000000; /* Figma fill_LU3YJF */
+    margin: 5px 0;
+}
+
+.user-role {
+    font-family: 'Inria Sans', sans-serif; /* Figma style_56002R */
+    font-size: 16px; /* Adjusted from 24px */
+    color: #555; /* Slightly lighter than black */
+    margin: 0;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav .nav-item {
+    margin-bottom: 5px;
+}
+
+.main-nav .nav-item a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #000000; /* Default text color black (Figma 1:14 etc.) */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: 'Inria Sans', sans-serif; /* Figma style_56002R */
+    font-size: 18px; /* Adjusted from 24px */
+}
+
+.main-nav .nav-item a:hover {
+    background-color: #a1a4b3; /* Darker grey hover effect */
+}
+
+.main-nav .nav-item.active a {
+    background-color: #FFFFFF; /* White background for active item (Figma 1:17) */
+    border: 1px solid #258DEE; /* Blue border for active item (Figma 1:17 stroke) */
+    color: #000; /* Black text (Figma 1:18) */
+    font-weight: bold; /* Keep bold for emphasis */
+    padding: 11px 14px; /* Adjust padding slightly for border */
+}
+
+.main-nav .nav-icon {
+    width: 24px; /* Adjust icon size */
+    height: 24px;
+    margin-right: 15px;
+    object-fit: contain;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex-grow: 1; /* Take remaining space */
+    padding: 25px;
+    background-color: #FFFFFF; /* Figma Rect 1:36 */
+    border-left: 1px solid #B7B2B2; /* Figma stroke_OFVANE */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee; /* Separator */
+}
+
+.page-title {
+    font-family: 'IM Fell English', serif; /* Figma style_OVJFWG */
+    font-size: 24px;
+    color: #000000; /* Figma fill_LU3YJF */
+    margin: 0;
+}
+
+.account-section {
+    display: flex;
+    align-items: center;
+}
+
+.account-section img {
+    width: 40px; /* Adjust size */
+    height: 40px;
+    margin-left: 15px;
+    border-radius: 50%; /* Make placeholder circular */
+}
+
+.account-placeholder {
+     border: 1px solid #ccc;
+}
+
+
+/* Customer Filters */
+.customer-filters {
+    display: flex;
+    align-items: flex-end; /* Align items to bottom for button alignment */
+    gap: 20px; /* Space between filter groups */
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for filter area */
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    font-family: 'Itim', cursive; /* Figma style_AHWAYQ */
+    font-size: 16px; /* Adjusted from 24px */
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.filter-group input[type="text"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #D9D9D9; /* Figma fill_8GZIAG */
+    min-width: 180px; /* Ensure inputs have some width */
+}
+
+.search-button {
+    padding: 10px 25px;
+    font-family: 'Inria Sans', sans-serif; /* Figma style_56002R */
+    font-size: 16px; /* Adjusted */
+    color: #000000; /* Figma fill_LU3YJF */
+    background-color: #FEFEFE; /* Figma fill_P92KCU */
+    border: 1px solid #D0CDCD; /* Figma stroke_MXNGT7 */
+    border-radius: 10px; /* Figma borderRadius */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: auto; /* Push search button to the right */
+}
+
+.search-button:hover {
+    background-color: #e8e8e8;
+}
+
+/* Customer Table */
+.customer-table-section {
+    background-color: #FFFFFF; /* Figma Rect 1:54 */
+    border: 1px solid #080808; /* Figma stroke_LMH2JR */
+    border-radius: 5px;
+    overflow: hidden; /* Ensures border radius applies to table */
+}
+
+.customer-table {
+    width: 100%;
+    border-collapse: collapse; /* Remove space between borders */
+}
+
+.customer-table th,
+.customer-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #000000; /* Figma Line 1:55 etc. stroke_3IDS7R */
+    font-family: 'Itim', cursive; /* Figma style_AHWAYQ */
+    font-size: 16px; /* Adjusted */
+    color: #000000; /* Figma fill_LU3YJF */
+    vertical-align: middle; /* Align content vertically */
+}
+
+/* Add vertical borders */
+.customer-table th,
+.customer-table td {
+    border-right: 1px solid #000000; /* Figma Line 1:52 etc. stroke_3IDS7R */
+}
+.customer-table th:last-child,
+.customer-table td:last-child {
+    border-right: none; /* Remove border from last column */
+}
+
+
+.customer-table thead th {
+    background-color: #f2f2f2; /* Light grey header */
+    font-weight: bold;
+}
+
+.customer-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping for readability */
+}
+
+.customer-table tbody tr:hover {
+    background-color: #f1f1f1; /* Hover effect */
+}
+
+/* Action Buttons in Table - Styles from Management_SystemSearch */
+.customer-table td.operations { /* Target the specific class */
+    text-align: center;
+}
+
+.operation-btn { /* Use the correct class name */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px; /* Re-add padding */
+    margin: 0 5px; /* Adjust margin */
+    vertical-align: middle; /* Ensure vertical alignment */
+}
+
+.operation-btn img {
+    width: 20px; /* Use size from Search */
+    /* height: 20px; /* Let aspect ratio determine height */
+    vertical-align: middle; /* Ensure vertical alignment */
+    display: inline-block; /* Adjust display if needed */
+}
+
+/* Remove specific hover effects for now to match Search */
+.edit-btn:hover {
+   /* background-color: #e0f7fa; */
+}
+
+.delete-btn:hover {
+   /* background-color: #ffebee; */
+}
+
+/* Table Footer */
+.table-footer {
+    padding: 10px 15px;
+    font-family: 'Itim', cursive; /* Figma style_AHWAYQ */
+    font-size: 14px; /* Adjusted */
+    color: #555;
+    background-color: #f9f9f9;
+    border-top: 1px solid #000000; /* Match table borders */
+}
